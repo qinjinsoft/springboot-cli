@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springboot-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-web/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-tcp-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-async/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-druid/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-email/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-minio/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-captcha/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mongodb/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-swagger/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rabbitMQ/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redisson/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-exception/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-scheduler/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-shiro-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-validator/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-protobuf-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-aop-logger/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-websocket-client/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-websocket-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-excel-export/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security-captcha/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis-plus-generator/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

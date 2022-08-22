@@ -1,7 +1,7 @@
 package com.netty.client.channel;
 
 import com.netty.client.handler.MessageHandler;
-import com.netty.client.protocol.MessageBuf;
+import com.netty.client.protobuf.MessageBuf;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;

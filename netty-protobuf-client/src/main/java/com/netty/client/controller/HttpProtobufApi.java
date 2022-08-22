@@ -27,7 +27,7 @@ public class HttpProtobufApi {
      */
     @GetMapping("/login")
     public String send(String username, String password) {
-        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newLogin(username, password));
+//        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newLogin(username, password));
         return "发送成功";
     }
 
@@ -35,8 +35,12 @@ public class HttpProtobufApi {
      * 消息发布
      */
     @GetMapping("/send")
-    public String send(Integer msgId, String data, Integer type) {
-        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newMessageReq(msgId, data, type));
+    public String send() {
+        NetMessage request = new NetMessage();
+        request.setMessageId(1003);
+        request.setPassword("123456");
+        request.setEmail("415105499@qq.com");
+        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newMessageReq(1003, JSONObject.toJSONString(request), 0));
         return "发送成功";
     }
 

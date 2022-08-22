@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.springboot.upload" />
+        <module name="server" />
+        <module name="springboot-thymeleaf" />
+        <module name="consumer (2) (com.springcloud)" />
+        <module name="mybatis_generation" />
+        <module name="consumer (1) (com.springcloud)" />
+        <module name="demo" />
+        <module name="springboot-shiro" />
+        <module name="springboot-web (1) (com.springboot.cli)" />
+        <module name="server (2)" />
+        <module name="common" />
+        <module name="server-1" />
+        <module name="provider" />
+        <module name="springboot-web (1)" />
+        <module name="springboot-web" />
+        <module name="springboot-web (2) (com.springboot.cli)" />
+        <module name="springboot-async" />
+        <module name="common (1) (com.springcloud)" />
+        <module name="server-2" />
+        <module name="springboot-validator (2)" />
+        <module name="consumer" />
+        <module name="consumer (1)" />
+        <module name="springboot-validator (4)" />
+        <module name="springboot-shiro-jwt" />
+        <module name="springboot-email" />
+        <module name="springboot-scheduler" />
+        <module name="springboot-jwt" />
+        <module name="cli (1) (com.springboot)" />
+        <module name="springboot-druid" />
+        <module name="springboot-exception" />
+        <module name="server (1)" />
+        <module name="springboot-minio" />
+        <module name="springboot-validator" />
+        <module name="springboot-redis" />
+        <module name="producer (1)" />
+        <module name="client (1)" />
+        <module name="springboot-captcha" />
+        <module name="springboot-elasticsearch" />
+        <module name="producer" />
+        <module name="springboot-validator (1)" />
+        <module name="springboot-redisson" />
+        <module name="springboot-validator (3)" />
+        <module name="provider (1)" />
+        <module name="mybatis-plus" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cli" target="1.8" />
+      <module name="cli (1) (com.springboot)" target="1.5" />
+      <module name="client" target="1.5" />
+      <module name="client (1)" target="1.5" />
+      <module name="com.springboot.upload" target="1.5" />
+      <module name="common" target="11" />
+      <module name="common (1) (com.springcloud)" target="11" />
+      <module name="consumer" target="11" />
+      <module name="consumer (1)" target="11" />
+      <module name="consumer (1) (com.springcloud)" target="11" />
+      <module name="consumer (2) (com.springcloud)" target="11" />
+      <module name="demo" target="1.5" />
+      <module name="gateway" target="11" />
+      <module name="gateway-demo" target="1.8" />
+      <module name="hystrix" target="1.8" />
+      <module name="mybatis-plus" target="1.5" />
+      <module name="mybatis_generation" target="1.5" />
+      <module name="producer" target="11" />
+      <module name="producer (1)" target="11" />
+      <module name="protobuf-client" target="1.5" />
+      <module name="provider" target="11" />
+      <module name="provider (1)" target="11" />
+      <module name="server" target="1.5" />
+      <module name="server (1)" target="1.5" />
+      <module name="server (2)" target="1.5" />
+      <module name="server-1" target="11" />
+      <module name="server-2" target="11" />
+      <module name="springboot-async" target="1.5" />
+      <module name="springboot-captcha" target="1.5" />
+      <module name="springboot-druid" target="1.5" />
+      <module name="springboot-elasticsearch" target="1.5" />
+      <module name="springboot-email" target="1.5" />
+      <module name="springboot-exception" target="1.5" />
+      <module name="springboot-jwt" target="1.5" />
+      <module name="springboot-kafka" target="1.5" />
+      <module name="springboot-minio" target="1.5" />
+      <module name="springboot-rabbitMQ" target="1.5" />
+      <module name="springboot-redis" target="1.5" />
+      <module name="springboot-redisson" target="1.5" />
+      <module name="springboot-scheduler" target="1.5" />
+      <module name="springboot-shiro" target="1.5" />
+      <module name="springboot-shiro-jwt" target="1.5" />
+      <module name="springboot-thymeleaf" target="1.5" />
+      <module name="springboot-validator" target="1.5" />
+      <module name="springboot-validator (1)" target="1.5" />
+      <module name="springboot-validator (2)" target="1.5" />
+      <module name="springboot-validator (3)" target="1.5" />
+      <module name="springboot-validator (4)" target="1.5" />
+      <module name="springboot-web" target="1.5" />
+      <module name="springboot-web (1)" target="1.5" />
+      <module name="springboot-web (1) (com.springboot.cli)" target="1.5" />
+      <module name="springboot-web (2) (com.springboot.cli)" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

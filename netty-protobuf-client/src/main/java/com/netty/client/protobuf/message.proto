@@ -1,0 +1,37 @@
+// 声明使用proto3
+syntax = "proto3";
+// 包名
+option java_package = "com.netty.client.protobuf";
+// 类名
+option java_outer_classname = "MessageBuf";
+
+// 消息整合，便于netty导入编码解码器
+message Message {
+    // 包类型
+    PackType packType = 1;
+    // 根据包类型多选1
+    oneof Pack{
+        MessageRequest messageRequest = 2;
+        MessageResponse messageResponse = 3;
+    }
+    // 包类型枚举
+    enum PackType {
+        MESSAGE_REQ = 0;
+        MESSAGE_RESP = 1;
+    }
+}
+
+// 消息请求
+message MessageRequest {
+    int32 messageId = 1;
+    //传输类型，0需要返回  1 不需要返回
+    int32 type = 2;
+    string data = 3;
+}
+
+// 消息响应
+message MessageResponse {
+    int32 messageId = 1;
+    int32 code = 2;
+    string message = 3;
+}

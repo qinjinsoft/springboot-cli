@@ -1,7 +1,7 @@
 package com.netty.client.utils;
 
 
-import com.netty.client.protocol.MessageBuf;
+import com.netty.client.protobuf.MessageBuf;
 
 /**
  * protobuf 消息构建
@@ -9,28 +9,28 @@ import com.netty.client.protocol.MessageBuf;
  * @author qiding
  */
 public class MessageBuilder {
-
-    /**
-     * 登录请求
-     *
-     * @param username 用户名
-     * @param password 密码
-     */
-    public static MessageBuf.Message.Builder newLogin(String username, String password) {
-        MessageBuf.LoginRequest.Builder loginMes = MessageBuf.LoginRequest.newBuilder().setUsername(username).setPassword(password);
-        return MessageBuf.Message.newBuilder().setLoginRequest(loginMes).setPackType(MessageBuf.Message.PackType.LOGIN_REQ);
-    }
-
-    /**
-     * 登录响应
-     *
-     * @param msg  提示消息
-     * @param code 错误码
-     */
-    public static MessageBuf.Message.Builder newLoginResp(String msg, Integer code) {
-        MessageBuf.LoginResponse.Builder loginResp = MessageBuf.LoginResponse.newBuilder().setMessage(msg).setCode(code);
-        return MessageBuf.Message.newBuilder().setLoginResponse(loginResp).setPackType(MessageBuf.Message.PackType.LOGIN_RESP);
-    }
+//
+//    /**
+//     * 登录请求
+//     *
+//     * @param username 用户名
+//     * @param password 密码
+//     */
+//    public static MessageBuf.Message.Builder newLogin(String username, String password) {
+//        MessageBuf.LoginRequest.Builder loginMes = MessageBuf.LoginRequest.newBuilder().setUsername(username).setPassword(password);
+//        return MessageBuf.Message.newBuilder().setLoginRequest(loginMes).setPackType(MessageBuf.Message.PackType.LOGIN_REQ);
+//    }
+//
+//    /**
+//     * 登录响应
+//     *
+//     * @param msg  提示消息
+//     * @param code 错误码
+//     */
+//    public static MessageBuf.Message.Builder newLoginResp(String msg, Integer code) {
+//        MessageBuf.LoginResponse.Builder loginResp = MessageBuf.LoginResponse.newBuilder().setMessage(msg).setCode(code);
+//        return MessageBuf.Message.newBuilder().setLoginResponse(loginResp).setPackType(MessageBuf.Message.PackType.LOGIN_RESP);
+//    }
 
     /**
      * 业务消息请求

@@ -1,6 +1,6 @@
 package com.netty.client.handler;
 
-import com.netty.client.protocol.MessageBuf;
+import com.netty.client.protobuf.MessageBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -28,10 +28,6 @@ public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.Messa
         log.debug("channelId:" + ctx.channel().id());
         log.debug("消息类型:{}", message.getPackType().name());
         switch (message.getPackType()) {
-            case LOGIN_RESP:
-                log.debug("收到登录回复\n{}", message.getLoginResponse());
-                // 回复客户端
-                break;
             case MESSAGE_RESP:
                 log.debug("收到消息回复\n{}", message.getMessageResponse());
                 // 回复客户端
