@@ -19,22 +19,22 @@ import org.springframework.stereotype.Component;
 @Component
 @ChannelHandler.Sharable
 @RequiredArgsConstructor
-public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.Message> {
+public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.msg_rsp> {
 
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, MessageBuf.Message message) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, MessageBuf.msg_rsp message) throws Exception {
         log.debug("\n");
         log.debug("channelId:" + ctx.channel().id());
-        log.debug("消息类型:{}", message.getPackType().name());
-        switch (message.getPackType()) {
-            case MESSAGE_RESP:
-                log.debug("收到消息回复\n{}", message.getMessageResponse());
-                // 回复客户端
-                break;
-            default:
-                log.error("不支持的消息类型");
-        }
+        log.debug("消息:{}", message);
+//        switch (message.getPackType()) {
+//            case MESSAGE_RESP:
+//                log.debug("收到消息回复\n{}", message.getMessageResponse());
+//                // 回复客户端
+//                break;
+//            default:
+//                log.error("不支持的消息类型");
+//        }
     }
 
     @Override

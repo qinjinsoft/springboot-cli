@@ -5,33 +5,58 @@ option java_package = "com.netty.client.protobuf";
 // 类名
 option java_outer_classname = "MessageBuf";
 
-// 消息整合，便于netty导入编码解码器
-message Message {
-    // 包类型
-    PackType packType = 1;
-    // 根据包类型多选1
-    oneof Pack{
-        MessageRequest messageRequest = 2;
-        MessageResponse messageResponse = 3;
-    }
-    // 包类型枚举
-    enum PackType {
-        MESSAGE_REQ = 0;
-        MESSAGE_RESP = 1;
-    }
+enum GAME {
+    CmdStart                    = 0;
+
+    G_CMCheckVersion  	        = 1000; // 查看最新版本
+    G_CMCheckNotice				= 1001;	// 查看公告
+    G_CMSyncServerTime  	    = 1002; // 同步服务器的时间
+
+    G_SMCheckVersion  	        = 2001; // 返回最新版本
+    G_SMCheckNotice				= 2002;	// 返回公告
+    G_SMSyncServerTime  	    = 2003; // 返回同步服务器的时间
+
+    G_SMNotifyText              = 9001; // 通知客户端提示语
 }
 
-// 消息请求
-message MessageRequest {
-    int32 messageId = 1;
-    //传输类型，0需要返回  1 不需要返回
-    int32 type = 2;
-    string data = 3;
+message msg_req {
+    int64  msg_id   = 1;    //消息序列号，客户端自增防重
+    int32  cmd      = 2;
+    bytes data 		= 3;
 }
 
-// 消息响应
-message MessageResponse {
-    int32 messageId = 1;
-    int32 code = 2;
-    string message = 3;
+message msg_rsp {
+    int32  cmd       = 1;
+    bytes data 		 = 2;
+}
+
+//查看最新版本
+message cm_check_version{
+    string  type = 1;
+}
+
+message sm_check_version{
+    string     version = 1;		//版本信息
+}
+
+//查看公告
+message cm_check_notice{
+
+}
+
+message sm_check_notice{
+    string     notice = 1;		//公告
+}
+
+//同步服务器时间
+message cm_sync_server_time{
+
+}
+
+message sm_sync_server_time{
+    int64 serverTime    = 1;		//服务器时间（时间戳）
+}
+
+message sm_notify_text{
+    string msg    = 1;		//提示信息
 }

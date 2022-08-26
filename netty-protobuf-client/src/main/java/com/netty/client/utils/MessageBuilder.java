@@ -37,23 +37,23 @@ public class MessageBuilder {
      *
      * @param msgId 消息id 请求的id和响应的id需一致，便于判断服务器响应的是哪个业务请求
      * @param data  请求内容
-     * @param type  业务类型
-     */
-    public static MessageBuf.Message.Builder newMessageReq(Integer msgId, String data, Integer type) {
-        MessageBuf.MessageRequest.Builder messageReq = MessageBuf.MessageRequest.newBuilder().setMessageId(msgId).setData(data).setType(type);
-        return MessageBuf.Message.newBuilder().setMessageRequest(messageReq).setPackType(MessageBuf.Message.PackType.MESSAGE_REQ);
-    }
-
-    /**
-     * 业务消息响应
-     *
-     * @param msgId 消息id 请求的id和响应的id需一致，便于判断服务器响应的是哪个业务请求
-     * @param msg   提示消息
-     * @param code  错误码
-     */
-    public static MessageBuf.Message.Builder newMessageResp(Integer msgId, String msg, Integer code) {
-        MessageBuf.MessageResponse.Builder messageResp = MessageBuf.MessageResponse.newBuilder().setMessageId(msgId).setMessage(msg).setCode(code);
-        return MessageBuf.Message.newBuilder().setMessageResponse(messageResp).setPackType(MessageBuf.Message.PackType.MESSAGE_RESP);
-    }
+//     * @param type  业务类型
+//     */
+//    public static MessageBuf.Message.Builder newMessageReq(Integer msgId, String data, Integer type) {
+//        MessageBuf.MessageRequest.Builder messageReq = MessageBuf.MessageRequest.newBuilder().setMessageId(msgId).setData(data).setType(type);
+//        return MessageBuf.Message.newBuilder().setMessageRequest(messageReq).setPackType(MessageBuf.Message.PackType.MESSAGE_REQ);
+//    }
+//
+//    /**
+//     * 业务消息响应
+//     *
+//     * @param msgId 消息id 请求的id和响应的id需一致，便于判断服务器响应的是哪个业务请求
+//     * @param msg   提示消息
+//     * @param code  错误码
+//     */
+//    public static MessageBuf.Message.Builder newMessageResp(Integer msgId, String msg, Integer code) {
+//        MessageBuf.MessageResponse.Builder messageResp = MessageBuf.MessageResponse.newBuilder().setMessageId(msgId).setMessage(msg).setCode(code);
+//        return MessageBuf.Message.newBuilder().setMessageResponse(messageResp).setPackType(MessageBuf.Message.PackType.MESSAGE_RESP);
+//    }
 
 }

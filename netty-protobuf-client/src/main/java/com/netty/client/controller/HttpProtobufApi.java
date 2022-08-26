@@ -1,6 +1,8 @@
 package com.netty.client.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.protobuf.ByteString;
+import com.netty.client.protobuf.MessageBuf;
 import com.netty.client.server.TcpClient;
 import com.netty.client.utils.MessageBuilder;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.nio.charset.StandardCharsets;
 
 /**
  * 模拟发送api
@@ -35,12 +39,12 @@ public class HttpProtobufApi {
      * 消息发布
      */
     @GetMapping("/send")
-    public String send() {
+    public String send(Integer messageId) {
         NetMessage request = new NetMessage();
-        request.setMessageId(1003);
-        request.setPassword("123456");
-        request.setEmail("415105499@qq.com");
-        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newMessageReq(1003, JSONObject.toJSONString(request), 0));
+        request.setType("9");
+        request.setName("test");
+        MessageBuf.msg_req.Builder builder = MessageBuf.msg_req.newBuilder().setMsgId(1000).setData(ByteString.copyFromUtf8(JSONObject.toJSONString(request)));
+        tcpClient.getSocketChannel().writeAndFlush(builder);
         return "发送成功";
     }
 
@@ -52,7 +56,7 @@ public class HttpProtobufApi {
         Integer msgId = body.getInteger("msgId");
         JSONObject data = body.getJSONObject("data");
         Integer type = body.getInteger("type");
-        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newMessageReq(msgId, data.toJSONString(), type));
+//        tcpClient.getSocketChannel().writeAndFlush(MessageBuilder.newMessageReq(msgId, data.toJSONString(), type));
         return "发送成功";
     }
 

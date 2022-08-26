@@ -12,14 +12,10 @@ import lombok.Data;
  */
 @Data
 public class NetMessage {
-    public int messageId;
 
 
-    public String email;
-    public String password;
-
-    public String nickName;
-
+    public String type;
+    public String name;
     public String toJson() {
         return JSON.toJSONString(this, SerializerFeature.IgnoreErrorGetter);
     }

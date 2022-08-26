@@ -32,7 +32,7 @@ public class ChannelInit extends ChannelInitializer<SocketChannel> {
                 .addLast("idle", new IdleStateHandler(0, 60, 0, TimeUnit.SECONDS))
                 // 添加编码、解码器
                 .addLast(new ProtobufVarint32FrameDecoder())
-                .addLast(new ProtobufDecoder(MessageBuf.Message.getDefaultInstance()))
+                .addLast(new ProtobufDecoder(MessageBuf.msg_rsp.getDefaultInstance()))
                 .addLast(new ProtobufVarint32LengthFieldPrepender())
                 .addLast(new ProtobufEncoder())
                 // 添加消息处理器

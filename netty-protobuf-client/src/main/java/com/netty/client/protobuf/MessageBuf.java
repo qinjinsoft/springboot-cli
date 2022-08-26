@@ -14,1277 +14,271 @@ public final class MessageBuf {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface MessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Message)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 包类型
-     * </pre>
-     *
-     * <code>.Message.PackType packType = 1;</code>
-     * @return The enum numeric value on the wire for packType.
-     */
-    int getPackTypeValue();
-    /**
-     * <pre>
-     * 包类型
-     * </pre>
-     *
-     * <code>.Message.PackType packType = 1;</code>
-     * @return The packType.
-     */
-    com.netty.client.protobuf.MessageBuf.Message.PackType getPackType();
-
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     * @return Whether the messageRequest field is set.
-     */
-    boolean hasMessageRequest();
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     * @return The messageRequest.
-     */
-    com.netty.client.protobuf.MessageBuf.MessageRequest getMessageRequest();
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     */
-    com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder getMessageRequestOrBuilder();
-
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     * @return Whether the messageResponse field is set.
-     */
-    boolean hasMessageResponse();
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     * @return The messageResponse.
-     */
-    com.netty.client.protobuf.MessageBuf.MessageResponse getMessageResponse();
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     */
-    com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder getMessageResponseOrBuilder();
-
-    public com.netty.client.protobuf.MessageBuf.Message.PackCase getPackCase();
-  }
   /**
-   * <pre>
-   * 消息整合，便于netty导入编码解码器
-   * </pre>
-   *
-   * Protobuf type {@code Message}
+   * Protobuf enum {@code GAME}
    */
-  public static final class Message extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Message)
-      MessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Message.newBuilder() to construct.
-    private Message(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Message() {
-      packType_ = 0;
-    }
+  public enum GAME
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CmdStart = 0;</code>
+     */
+    CmdStart(0),
+    /**
+     * <pre>
+     * 查看最新版本
+     * </pre>
+     *
+     * <code>G_CMCheckVersion = 1000;</code>
+     */
+    G_CMCheckVersion(1000),
+    /**
+     * <pre>
+     * 查看公告
+     * </pre>
+     *
+     * <code>G_CMCheckNotice = 1001;</code>
+     */
+    G_CMCheckNotice(1001),
+    /**
+     * <pre>
+     * 同步服务器的时间
+     * </pre>
+     *
+     * <code>G_CMSyncServerTime = 1002;</code>
+     */
+    G_CMSyncServerTime(1002),
+    /**
+     * <pre>
+     * 返回最新版本
+     * </pre>
+     *
+     * <code>G_SMCheckVersion = 2001;</code>
+     */
+    G_SMCheckVersion(2001),
+    /**
+     * <pre>
+     * 返回公告
+     * </pre>
+     *
+     * <code>G_SMCheckNotice = 2002;</code>
+     */
+    G_SMCheckNotice(2002),
+    /**
+     * <pre>
+     * 返回同步服务器的时间
+     * </pre>
+     *
+     * <code>G_SMSyncServerTime = 2003;</code>
+     */
+    G_SMSyncServerTime(2003),
+    /**
+     * <pre>
+     * 通知客户端提示语
+     * </pre>
+     *
+     * <code>G_SMNotifyText = 9001;</code>
+     */
+    G_SMNotifyText(9001),
+    UNRECOGNIZED(-1),
+    ;
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Message();
-    }
+    /**
+     * <code>CmdStart = 0;</code>
+     */
+    public static final int CmdStart_VALUE = 0;
+    /**
+     * <pre>
+     * 查看最新版本
+     * </pre>
+     *
+     * <code>G_CMCheckVersion = 1000;</code>
+     */
+    public static final int G_CMCheckVersion_VALUE = 1000;
+    /**
+     * <pre>
+     * 查看公告
+     * </pre>
+     *
+     * <code>G_CMCheckNotice = 1001;</code>
+     */
+    public static final int G_CMCheckNotice_VALUE = 1001;
+    /**
+     * <pre>
+     * 同步服务器的时间
+     * </pre>
+     *
+     * <code>G_CMSyncServerTime = 1002;</code>
+     */
+    public static final int G_CMSyncServerTime_VALUE = 1002;
+    /**
+     * <pre>
+     * 返回最新版本
+     * </pre>
+     *
+     * <code>G_SMCheckVersion = 2001;</code>
+     */
+    public static final int G_SMCheckVersion_VALUE = 2001;
+    /**
+     * <pre>
+     * 返回公告
+     * </pre>
+     *
+     * <code>G_SMCheckNotice = 2002;</code>
+     */
+    public static final int G_SMCheckNotice_VALUE = 2002;
+    /**
+     * <pre>
+     * 返回同步服务器的时间
+     * </pre>
+     *
+     * <code>G_SMSyncServerTime = 2003;</code>
+     */
+    public static final int G_SMSyncServerTime_VALUE = 2003;
+    /**
+     * <pre>
+     * 通知客户端提示语
+     * </pre>
+     *
+     * <code>G_SMNotifyText = 9001;</code>
+     */
+    public static final int G_SMNotifyText_VALUE = 9001;
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Message(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
+      return value;
+    }
 
-              packType_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.netty.client.protobuf.MessageBuf.MessageRequest.Builder subBuilder = null;
-              if (packCase_ == 2) {
-                subBuilder = ((com.netty.client.protobuf.MessageBuf.MessageRequest) pack_).toBuilder();
-              }
-              pack_ =
-                  input.readMessage(com.netty.client.protobuf.MessageBuf.MessageRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.netty.client.protobuf.MessageBuf.MessageRequest) pack_);
-                pack_ = subBuilder.buildPartial();
-              }
-              packCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.netty.client.protobuf.MessageBuf.MessageResponse.Builder subBuilder = null;
-              if (packCase_ == 3) {
-                subBuilder = ((com.netty.client.protobuf.MessageBuf.MessageResponse) pack_).toBuilder();
-              }
-              pack_ =
-                  input.readMessage(com.netty.client.protobuf.MessageBuf.MessageResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.netty.client.protobuf.MessageBuf.MessageResponse) pack_);
-                pack_ = subBuilder.buildPartial();
-              }
-              packCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GAME valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GAME forNumber(int value) {
+      switch (value) {
+        case 0: return CmdStart;
+        case 1000: return G_CMCheckVersion;
+        case 1001: return G_CMCheckNotice;
+        case 1002: return G_CMSyncServerTime;
+        case 2001: return G_SMCheckVersion;
+        case 2002: return G_SMCheckNotice;
+        case 2003: return G_SMSyncServerTime;
+        case 9001: return G_SMNotifyText;
+        default: return null;
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GAME>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GAME> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GAME>() {
+            public GAME findValueByNumber(int number) {
+              return GAME.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_Message_descriptor;
+      return com.netty.client.protobuf.MessageBuf.getDescriptor().getEnumTypes().get(0);
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_Message_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.netty.client.protobuf.MessageBuf.Message.class, com.netty.client.protobuf.MessageBuf.Message.Builder.class);
+    private static final GAME[] VALUES = values();
+
+    public static GAME valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
     }
 
-    /**
-     * <pre>
-     * 包类型枚举
-     * </pre>
-     *
-     * Protobuf enum {@code Message.PackType}
-     */
-    public enum PackType
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>MESSAGE_REQ = 0;</code>
-       */
-      MESSAGE_REQ(0),
-      /**
-       * <code>MESSAGE_RESP = 1;</code>
-       */
-      MESSAGE_RESP(1),
-      UNRECOGNIZED(-1),
-      ;
+    private final int value;
 
-      /**
-       * <code>MESSAGE_REQ = 0;</code>
-       */
-      public static final int MESSAGE_REQ_VALUE = 0;
-      /**
-       * <code>MESSAGE_RESP = 1;</code>
-       */
-      public static final int MESSAGE_RESP_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PackType valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static PackType forNumber(int value) {
-        switch (value) {
-          case 0: return MESSAGE_REQ;
-          case 1: return MESSAGE_RESP;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<PackType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          PackType> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<PackType>() {
-              public PackType findValueByNumber(int number) {
-                return PackType.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.netty.client.protobuf.MessageBuf.Message.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final PackType[] VALUES = values();
-
-      public static PackType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private PackType(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:Message.PackType)
+    private GAME(int value) {
+      this.value = value;
     }
 
-    private int packCase_ = 0;
-    private java.lang.Object pack_;
-    public enum PackCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      MESSAGEREQUEST(2),
-      MESSAGERESPONSE(3),
-      PACK_NOT_SET(0);
-      private final int value;
-      private PackCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PackCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static PackCase forNumber(int value) {
-        switch (value) {
-          case 2: return MESSAGEREQUEST;
-          case 3: return MESSAGERESPONSE;
-          case 0: return PACK_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public PackCase
-    getPackCase() {
-      return PackCase.forNumber(
-          packCase_);
-    }
-
-    public static final int PACKTYPE_FIELD_NUMBER = 1;
-    private int packType_;
-    /**
-     * <pre>
-     * 包类型
-     * </pre>
-     *
-     * <code>.Message.PackType packType = 1;</code>
-     * @return The enum numeric value on the wire for packType.
-     */
-    @java.lang.Override public int getPackTypeValue() {
-      return packType_;
-    }
-    /**
-     * <pre>
-     * 包类型
-     * </pre>
-     *
-     * <code>.Message.PackType packType = 1;</code>
-     * @return The packType.
-     */
-    @java.lang.Override public com.netty.client.protobuf.MessageBuf.Message.PackType getPackType() {
-      @SuppressWarnings("deprecation")
-      com.netty.client.protobuf.MessageBuf.Message.PackType result = com.netty.client.protobuf.MessageBuf.Message.PackType.valueOf(packType_);
-      return result == null ? com.netty.client.protobuf.MessageBuf.Message.PackType.UNRECOGNIZED : result;
-    }
-
-    public static final int MESSAGEREQUEST_FIELD_NUMBER = 2;
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     * @return Whether the messageRequest field is set.
-     */
-    @java.lang.Override
-    public boolean hasMessageRequest() {
-      return packCase_ == 2;
-    }
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     * @return The messageRequest.
-     */
-    @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageRequest getMessageRequest() {
-      if (packCase_ == 2) {
-         return (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_;
-      }
-      return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-    }
-    /**
-     * <code>.MessageRequest messageRequest = 2;</code>
-     */
-    @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder getMessageRequestOrBuilder() {
-      if (packCase_ == 2) {
-         return (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_;
-      }
-      return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-    }
-
-    public static final int MESSAGERESPONSE_FIELD_NUMBER = 3;
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     * @return Whether the messageResponse field is set.
-     */
-    @java.lang.Override
-    public boolean hasMessageResponse() {
-      return packCase_ == 3;
-    }
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     * @return The messageResponse.
-     */
-    @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageResponse getMessageResponse() {
-      if (packCase_ == 3) {
-         return (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_;
-      }
-      return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-    }
-    /**
-     * <code>.MessageResponse messageResponse = 3;</code>
-     */
-    @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder getMessageResponseOrBuilder() {
-      if (packCase_ == 3) {
-         return (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_;
-      }
-      return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (packType_ != com.netty.client.protobuf.MessageBuf.Message.PackType.MESSAGE_REQ.getNumber()) {
-        output.writeEnum(1, packType_);
-      }
-      if (packCase_ == 2) {
-        output.writeMessage(2, (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_);
-      }
-      if (packCase_ == 3) {
-        output.writeMessage(3, (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (packType_ != com.netty.client.protobuf.MessageBuf.Message.PackType.MESSAGE_REQ.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, packType_);
-      }
-      if (packCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_);
-      }
-      if (packCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.Message)) {
-        return super.equals(obj);
-      }
-      com.netty.client.protobuf.MessageBuf.Message other = (com.netty.client.protobuf.MessageBuf.Message) obj;
-
-      if (packType_ != other.packType_) return false;
-      if (!getPackCase().equals(other.getPackCase())) return false;
-      switch (packCase_) {
-        case 2:
-          if (!getMessageRequest()
-              .equals(other.getMessageRequest())) return false;
-          break;
-        case 3:
-          if (!getMessageResponse()
-              .equals(other.getMessageResponse())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PACKTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + packType_;
-      switch (packCase_) {
-        case 2:
-          hash = (37 * hash) + MESSAGEREQUEST_FIELD_NUMBER;
-          hash = (53 * hash) + getMessageRequest().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + MESSAGERESPONSE_FIELD_NUMBER;
-          hash = (53 * hash) + getMessageResponse().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.netty.client.protobuf.MessageBuf.Message parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.Message prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 消息整合，便于netty导入编码解码器
-     * </pre>
-     *
-     * Protobuf type {@code Message}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Message)
-        com.netty.client.protobuf.MessageBuf.MessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_Message_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_Message_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.netty.client.protobuf.MessageBuf.Message.class, com.netty.client.protobuf.MessageBuf.Message.Builder.class);
-      }
-
-      // Construct using com.netty.client.protobuf.MessageBuf.Message.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        packType_ = 0;
-
-        packCase_ = 0;
-        pack_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_Message_descriptor;
-      }
-
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.Message getDefaultInstanceForType() {
-        return com.netty.client.protobuf.MessageBuf.Message.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.Message build() {
-        com.netty.client.protobuf.MessageBuf.Message result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.Message buildPartial() {
-        com.netty.client.protobuf.MessageBuf.Message result = new com.netty.client.protobuf.MessageBuf.Message(this);
-        result.packType_ = packType_;
-        if (packCase_ == 2) {
-          if (messageRequestBuilder_ == null) {
-            result.pack_ = pack_;
-          } else {
-            result.pack_ = messageRequestBuilder_.build();
-          }
-        }
-        if (packCase_ == 3) {
-          if (messageResponseBuilder_ == null) {
-            result.pack_ = pack_;
-          } else {
-            result.pack_ = messageResponseBuilder_.build();
-          }
-        }
-        result.packCase_ = packCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.netty.client.protobuf.MessageBuf.Message) {
-          return mergeFrom((com.netty.client.protobuf.MessageBuf.Message)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.Message other) {
-        if (other == com.netty.client.protobuf.MessageBuf.Message.getDefaultInstance()) return this;
-        if (other.packType_ != 0) {
-          setPackTypeValue(other.getPackTypeValue());
-        }
-        switch (other.getPackCase()) {
-          case MESSAGEREQUEST: {
-            mergeMessageRequest(other.getMessageRequest());
-            break;
-          }
-          case MESSAGERESPONSE: {
-            mergeMessageResponse(other.getMessageResponse());
-            break;
-          }
-          case PACK_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.netty.client.protobuf.MessageBuf.Message parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.netty.client.protobuf.MessageBuf.Message) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int packCase_ = 0;
-      private java.lang.Object pack_;
-      public PackCase
-          getPackCase() {
-        return PackCase.forNumber(
-            packCase_);
-      }
-
-      public Builder clearPack() {
-        packCase_ = 0;
-        pack_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private int packType_ = 0;
-      /**
-       * <pre>
-       * 包类型
-       * </pre>
-       *
-       * <code>.Message.PackType packType = 1;</code>
-       * @return The enum numeric value on the wire for packType.
-       */
-      @java.lang.Override public int getPackTypeValue() {
-        return packType_;
-      }
-      /**
-       * <pre>
-       * 包类型
-       * </pre>
-       *
-       * <code>.Message.PackType packType = 1;</code>
-       * @param value The enum numeric value on the wire for packType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPackTypeValue(int value) {
-        
-        packType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 包类型
-       * </pre>
-       *
-       * <code>.Message.PackType packType = 1;</code>
-       * @return The packType.
-       */
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.Message.PackType getPackType() {
-        @SuppressWarnings("deprecation")
-        com.netty.client.protobuf.MessageBuf.Message.PackType result = com.netty.client.protobuf.MessageBuf.Message.PackType.valueOf(packType_);
-        return result == null ? com.netty.client.protobuf.MessageBuf.Message.PackType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * 包类型
-       * </pre>
-       *
-       * <code>.Message.PackType packType = 1;</code>
-       * @param value The packType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPackType(com.netty.client.protobuf.MessageBuf.Message.PackType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        packType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 包类型
-       * </pre>
-       *
-       * <code>.Message.PackType packType = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPackType() {
-        
-        packType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.netty.client.protobuf.MessageBuf.MessageRequest, com.netty.client.protobuf.MessageBuf.MessageRequest.Builder, com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder> messageRequestBuilder_;
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       * @return Whether the messageRequest field is set.
-       */
-      @java.lang.Override
-      public boolean hasMessageRequest() {
-        return packCase_ == 2;
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       * @return The messageRequest.
-       */
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageRequest getMessageRequest() {
-        if (messageRequestBuilder_ == null) {
-          if (packCase_ == 2) {
-            return (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_;
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-        } else {
-          if (packCase_ == 2) {
-            return messageRequestBuilder_.getMessage();
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      public Builder setMessageRequest(com.netty.client.protobuf.MessageBuf.MessageRequest value) {
-        if (messageRequestBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pack_ = value;
-          onChanged();
-        } else {
-          messageRequestBuilder_.setMessage(value);
-        }
-        packCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      public Builder setMessageRequest(
-          com.netty.client.protobuf.MessageBuf.MessageRequest.Builder builderForValue) {
-        if (messageRequestBuilder_ == null) {
-          pack_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageRequestBuilder_.setMessage(builderForValue.build());
-        }
-        packCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      public Builder mergeMessageRequest(com.netty.client.protobuf.MessageBuf.MessageRequest value) {
-        if (messageRequestBuilder_ == null) {
-          if (packCase_ == 2 &&
-              pack_ != com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance()) {
-            pack_ = com.netty.client.protobuf.MessageBuf.MessageRequest.newBuilder((com.netty.client.protobuf.MessageBuf.MessageRequest) pack_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            pack_ = value;
-          }
-          onChanged();
-        } else {
-          if (packCase_ == 2) {
-            messageRequestBuilder_.mergeFrom(value);
-          } else {
-            messageRequestBuilder_.setMessage(value);
-          }
-        }
-        packCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      public Builder clearMessageRequest() {
-        if (messageRequestBuilder_ == null) {
-          if (packCase_ == 2) {
-            packCase_ = 0;
-            pack_ = null;
-            onChanged();
-          }
-        } else {
-          if (packCase_ == 2) {
-            packCase_ = 0;
-            pack_ = null;
-          }
-          messageRequestBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      public com.netty.client.protobuf.MessageBuf.MessageRequest.Builder getMessageRequestBuilder() {
-        return getMessageRequestFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder getMessageRequestOrBuilder() {
-        if ((packCase_ == 2) && (messageRequestBuilder_ != null)) {
-          return messageRequestBuilder_.getMessageOrBuilder();
-        } else {
-          if (packCase_ == 2) {
-            return (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_;
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.MessageRequest messageRequest = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.netty.client.protobuf.MessageBuf.MessageRequest, com.netty.client.protobuf.MessageBuf.MessageRequest.Builder, com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder> 
-          getMessageRequestFieldBuilder() {
-        if (messageRequestBuilder_ == null) {
-          if (!(packCase_ == 2)) {
-            pack_ = com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
-          }
-          messageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.netty.client.protobuf.MessageBuf.MessageRequest, com.netty.client.protobuf.MessageBuf.MessageRequest.Builder, com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder>(
-                  (com.netty.client.protobuf.MessageBuf.MessageRequest) pack_,
-                  getParentForChildren(),
-                  isClean());
-          pack_ = null;
-        }
-        packCase_ = 2;
-        onChanged();;
-        return messageRequestBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.netty.client.protobuf.MessageBuf.MessageResponse, com.netty.client.protobuf.MessageBuf.MessageResponse.Builder, com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder> messageResponseBuilder_;
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       * @return Whether the messageResponse field is set.
-       */
-      @java.lang.Override
-      public boolean hasMessageResponse() {
-        return packCase_ == 3;
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       * @return The messageResponse.
-       */
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageResponse getMessageResponse() {
-        if (messageResponseBuilder_ == null) {
-          if (packCase_ == 3) {
-            return (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_;
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-        } else {
-          if (packCase_ == 3) {
-            return messageResponseBuilder_.getMessage();
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      public Builder setMessageResponse(com.netty.client.protobuf.MessageBuf.MessageResponse value) {
-        if (messageResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pack_ = value;
-          onChanged();
-        } else {
-          messageResponseBuilder_.setMessage(value);
-        }
-        packCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      public Builder setMessageResponse(
-          com.netty.client.protobuf.MessageBuf.MessageResponse.Builder builderForValue) {
-        if (messageResponseBuilder_ == null) {
-          pack_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageResponseBuilder_.setMessage(builderForValue.build());
-        }
-        packCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      public Builder mergeMessageResponse(com.netty.client.protobuf.MessageBuf.MessageResponse value) {
-        if (messageResponseBuilder_ == null) {
-          if (packCase_ == 3 &&
-              pack_ != com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance()) {
-            pack_ = com.netty.client.protobuf.MessageBuf.MessageResponse.newBuilder((com.netty.client.protobuf.MessageBuf.MessageResponse) pack_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            pack_ = value;
-          }
-          onChanged();
-        } else {
-          if (packCase_ == 3) {
-            messageResponseBuilder_.mergeFrom(value);
-          } else {
-            messageResponseBuilder_.setMessage(value);
-          }
-        }
-        packCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      public Builder clearMessageResponse() {
-        if (messageResponseBuilder_ == null) {
-          if (packCase_ == 3) {
-            packCase_ = 0;
-            pack_ = null;
-            onChanged();
-          }
-        } else {
-          if (packCase_ == 3) {
-            packCase_ = 0;
-            pack_ = null;
-          }
-          messageResponseBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      public com.netty.client.protobuf.MessageBuf.MessageResponse.Builder getMessageResponseBuilder() {
-        return getMessageResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder getMessageResponseOrBuilder() {
-        if ((packCase_ == 3) && (messageResponseBuilder_ != null)) {
-          return messageResponseBuilder_.getMessageOrBuilder();
-        } else {
-          if (packCase_ == 3) {
-            return (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_;
-          }
-          return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.MessageResponse messageResponse = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.netty.client.protobuf.MessageBuf.MessageResponse, com.netty.client.protobuf.MessageBuf.MessageResponse.Builder, com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder> 
-          getMessageResponseFieldBuilder() {
-        if (messageResponseBuilder_ == null) {
-          if (!(packCase_ == 3)) {
-            pack_ = com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
-          }
-          messageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.netty.client.protobuf.MessageBuf.MessageResponse, com.netty.client.protobuf.MessageBuf.MessageResponse.Builder, com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder>(
-                  (com.netty.client.protobuf.MessageBuf.MessageResponse) pack_,
-                  getParentForChildren(),
-                  isClean());
-          pack_ = null;
-        }
-        packCase_ = 3;
-        onChanged();;
-        return messageResponseBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Message)
-    }
-
-    // @@protoc_insertion_point(class_scope:Message)
-    private static final com.netty.client.protobuf.MessageBuf.Message DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.Message();
-    }
-
-    public static com.netty.client.protobuf.MessageBuf.Message getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Message>
-        PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      @java.lang.Override
-      public Message parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Message(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Message> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Message> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.Message getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
+    // @@protoc_insertion_point(enum_scope:GAME)
   }
 
-  public interface MessageRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:MessageRequest)
+  public interface msg_reqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:msg_req)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 messageId = 1;</code>
-     * @return The messageId.
-     */
-    int getMessageId();
-
-    /**
      * <pre>
-     *传输类型，0需要返回  1 不需要返回
+     *消息序列号，客户端自增防重
      * </pre>
      *
-     * <code>int32 type = 2;</code>
-     * @return The type.
+     * <code>int64 msg_id = 1;</code>
+     * @return The msgId.
      */
-    int getType();
+    long getMsgId();
 
     /**
-     * <code>string data = 3;</code>
+     * <code>int32 cmd = 2;</code>
+     * @return The cmd.
+     */
+    int getCmd();
+
+    /**
+     * <code>bytes data = 3;</code>
      * @return The data.
      */
-    java.lang.String getData();
-    /**
-     * <code>string data = 3;</code>
-     * @return The bytes for data.
-     */
-    com.google.protobuf.ByteString
-        getDataBytes();
+    com.google.protobuf.ByteString getData();
   }
   /**
-   * <pre>
-   * 消息请求
-   * </pre>
-   *
-   * Protobuf type {@code MessageRequest}
+   * Protobuf type {@code msg_req}
    */
-  public static final class MessageRequest extends
+  public static final class msg_req extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:MessageRequest)
-      MessageRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:msg_req)
+      msg_reqOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MessageRequest.newBuilder() to construct.
-    private MessageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use msg_req.newBuilder() to construct.
+    private msg_req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MessageRequest() {
-      data_ = "";
+    private msg_req() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MessageRequest();
+      return new msg_req();
     }
 
     @java.lang.Override
@@ -1292,7 +286,7 @@ public final class MessageBuf {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MessageRequest(
+    private msg_req(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1312,18 +306,17 @@ public final class MessageBuf {
               break;
             case 8: {
 
-              messageId_ = input.readInt32();
+              msgId_ = input.readInt64();
               break;
             }
             case 16: {
 
-              type_ = input.readInt32();
+              cmd_ = input.readInt32();
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
 
-              data_ = s;
+              data_ = input.readBytes();
               break;
             }
             default: {
@@ -1349,79 +342,52 @@ public final class MessageBuf {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_MessageRequest_descriptor;
+      return com.netty.client.protobuf.MessageBuf.internal_static_msg_req_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_MessageRequest_fieldAccessorTable
+      return com.netty.client.protobuf.MessageBuf.internal_static_msg_req_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.netty.client.protobuf.MessageBuf.MessageRequest.class, com.netty.client.protobuf.MessageBuf.MessageRequest.Builder.class);
+              com.netty.client.protobuf.MessageBuf.msg_req.class, com.netty.client.protobuf.MessageBuf.msg_req.Builder.class);
     }
 
-    public static final int MESSAGEID_FIELD_NUMBER = 1;
-    private int messageId_;
-    /**
-     * <code>int32 messageId = 1;</code>
-     * @return The messageId.
-     */
-    @java.lang.Override
-    public int getMessageId() {
-      return messageId_;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_;
+    public static final int MSG_ID_FIELD_NUMBER = 1;
+    private long msgId_;
     /**
      * <pre>
-     *传输类型，0需要返回  1 不需要返回
+     *消息序列号，客户端自增防重
      * </pre>
      *
-     * <code>int32 type = 2;</code>
-     * @return The type.
+     * <code>int64 msg_id = 1;</code>
+     * @return The msgId.
      */
     @java.lang.Override
-    public int getType() {
-      return type_;
+    public long getMsgId() {
+      return msgId_;
+    }
+
+    public static final int CMD_FIELD_NUMBER = 2;
+    private int cmd_;
+    /**
+     * <code>int32 cmd = 2;</code>
+     * @return The cmd.
+     */
+    @java.lang.Override
+    public int getCmd() {
+      return cmd_;
     }
 
     public static final int DATA_FIELD_NUMBER = 3;
-    private volatile java.lang.Object data_;
+    private com.google.protobuf.ByteString data_;
     /**
-     * <code>string data = 3;</code>
+     * <code>bytes data = 3;</code>
      * @return The data.
      */
     @java.lang.Override
-    public java.lang.String getData() {
-      java.lang.Object ref = data_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        data_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string data = 3;</code>
-     * @return The bytes for data.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDataBytes() {
-      java.lang.Object ref = data_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        data_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.ByteString getData() {
+      return data_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1438,14 +404,14 @@ public final class MessageBuf {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageId_ != 0) {
-        output.writeInt32(1, messageId_);
+      if (msgId_ != 0L) {
+        output.writeInt64(1, msgId_);
       }
-      if (type_ != 0) {
-        output.writeInt32(2, type_);
+      if (cmd_ != 0) {
+        output.writeInt32(2, cmd_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, data_);
+      if (!data_.isEmpty()) {
+        output.writeBytes(3, data_);
       }
       unknownFields.writeTo(output);
     }
@@ -1456,16 +422,17 @@ public final class MessageBuf {
       if (size != -1) return size;
 
       size = 0;
-      if (messageId_ != 0) {
+      if (msgId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, messageId_);
+          .computeInt64Size(1, msgId_);
       }
-      if (type_ != 0) {
+      if (cmd_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, type_);
+          .computeInt32Size(2, cmd_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, data_);
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, data_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1477,15 +444,15 @@ public final class MessageBuf {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.MessageRequest)) {
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.msg_req)) {
         return super.equals(obj);
       }
-      com.netty.client.protobuf.MessageBuf.MessageRequest other = (com.netty.client.protobuf.MessageBuf.MessageRequest) obj;
+      com.netty.client.protobuf.MessageBuf.msg_req other = (com.netty.client.protobuf.MessageBuf.msg_req) obj;
 
-      if (getMessageId()
-          != other.getMessageId()) return false;
-      if (getType()
-          != other.getType()) return false;
+      if (getMsgId()
+          != other.getMsgId()) return false;
+      if (getCmd()
+          != other.getCmd()) return false;
       if (!getData()
           .equals(other.getData())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -1499,10 +466,11 @@ public final class MessageBuf {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MESSAGEID_FIELD_NUMBER;
-      hash = (53 * hash) + getMessageId();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType();
+      hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMsgId());
+      hash = (37 * hash) + CMD_FIELD_NUMBER;
+      hash = (53 * hash) + getCmd();
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + getData().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1510,69 +478,69 @@ public final class MessageBuf {
       return hash;
     }
 
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(byte[] data)
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(java.io.InputStream input)
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseDelimitedFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_req parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1585,7 +553,7 @@ public final class MessageBuf {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.MessageRequest prototype) {
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.msg_req prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1601,30 +569,26 @@ public final class MessageBuf {
       return builder;
     }
     /**
-     * <pre>
-     * 消息请求
-     * </pre>
-     *
-     * Protobuf type {@code MessageRequest}
+     * Protobuf type {@code msg_req}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:MessageRequest)
-        com.netty.client.protobuf.MessageBuf.MessageRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:msg_req)
+        com.netty.client.protobuf.MessageBuf.msg_reqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageRequest_descriptor;
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_req_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageRequest_fieldAccessorTable
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_req_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.netty.client.protobuf.MessageBuf.MessageRequest.class, com.netty.client.protobuf.MessageBuf.MessageRequest.Builder.class);
+                com.netty.client.protobuf.MessageBuf.msg_req.class, com.netty.client.protobuf.MessageBuf.msg_req.Builder.class);
       }
 
-      // Construct using com.netty.client.protobuf.MessageBuf.MessageRequest.newBuilder()
+      // Construct using com.netty.client.protobuf.MessageBuf.msg_req.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1642,11 +606,11 @@ public final class MessageBuf {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        messageId_ = 0;
+        msgId_ = 0L;
 
-        type_ = 0;
+        cmd_ = 0;
 
-        data_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
 
         return this;
       }
@@ -1654,17 +618,17 @@ public final class MessageBuf {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageRequest_descriptor;
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_req_descriptor;
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageRequest getDefaultInstanceForType() {
-        return com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance();
+      public com.netty.client.protobuf.MessageBuf.msg_req getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.msg_req.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageRequest build() {
-        com.netty.client.protobuf.MessageBuf.MessageRequest result = buildPartial();
+      public com.netty.client.protobuf.MessageBuf.msg_req build() {
+        com.netty.client.protobuf.MessageBuf.msg_req result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1672,10 +636,10 @@ public final class MessageBuf {
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageRequest buildPartial() {
-        com.netty.client.protobuf.MessageBuf.MessageRequest result = new com.netty.client.protobuf.MessageBuf.MessageRequest(this);
-        result.messageId_ = messageId_;
-        result.type_ = type_;
+      public com.netty.client.protobuf.MessageBuf.msg_req buildPartial() {
+        com.netty.client.protobuf.MessageBuf.msg_req result = new com.netty.client.protobuf.MessageBuf.msg_req(this);
+        result.msgId_ = msgId_;
+        result.cmd_ = cmd_;
         result.data_ = data_;
         onBuilt();
         return result;
@@ -1715,25 +679,24 @@ public final class MessageBuf {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.netty.client.protobuf.MessageBuf.MessageRequest) {
-          return mergeFrom((com.netty.client.protobuf.MessageBuf.MessageRequest)other);
+        if (other instanceof com.netty.client.protobuf.MessageBuf.msg_req) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.msg_req)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.MessageRequest other) {
-        if (other == com.netty.client.protobuf.MessageBuf.MessageRequest.getDefaultInstance()) return this;
-        if (other.getMessageId() != 0) {
-          setMessageId(other.getMessageId());
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.msg_req other) {
+        if (other == com.netty.client.protobuf.MessageBuf.msg_req.getDefaultInstance()) return this;
+        if (other.getMsgId() != 0L) {
+          setMsgId(other.getMsgId());
         }
-        if (other.getType() != 0) {
-          setType(other.getType());
+        if (other.getCmd() != 0) {
+          setCmd(other.getCmd());
         }
-        if (!other.getData().isEmpty()) {
-          data_ = other.data_;
-          onChanged();
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1750,11 +713,11 @@ public final class MessageBuf {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.netty.client.protobuf.MessageBuf.MessageRequest parsedMessage = null;
+        com.netty.client.protobuf.MessageBuf.msg_req parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.netty.client.protobuf.MessageBuf.MessageRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.msg_req) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1764,121 +727,95 @@ public final class MessageBuf {
         return this;
       }
 
-      private int messageId_ ;
+      private long msgId_ ;
       /**
-       * <code>int32 messageId = 1;</code>
-       * @return The messageId.
+       * <pre>
+       *消息序列号，客户端自增防重
+       * </pre>
+       *
+       * <code>int64 msg_id = 1;</code>
+       * @return The msgId.
        */
       @java.lang.Override
-      public int getMessageId() {
-        return messageId_;
+      public long getMsgId() {
+        return msgId_;
       }
       /**
-       * <code>int32 messageId = 1;</code>
-       * @param value The messageId to set.
+       * <pre>
+       *消息序列号，客户端自增防重
+       * </pre>
+       *
+       * <code>int64 msg_id = 1;</code>
+       * @param value The msgId to set.
        * @return This builder for chaining.
        */
-      public Builder setMessageId(int value) {
+      public Builder setMsgId(long value) {
         
-        messageId_ = value;
+        msgId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 messageId = 1;</code>
+       * <pre>
+       *消息序列号，客户端自增防重
+       * </pre>
+       *
+       * <code>int64 msg_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMessageId() {
+      public Builder clearMsgId() {
         
-        messageId_ = 0;
+        msgId_ = 0L;
         onChanged();
         return this;
       }
 
-      private int type_ ;
+      private int cmd_ ;
       /**
-       * <pre>
-       *传输类型，0需要返回  1 不需要返回
-       * </pre>
-       *
-       * <code>int32 type = 2;</code>
-       * @return The type.
+       * <code>int32 cmd = 2;</code>
+       * @return The cmd.
        */
       @java.lang.Override
-      public int getType() {
-        return type_;
+      public int getCmd() {
+        return cmd_;
       }
       /**
-       * <pre>
-       *传输类型，0需要返回  1 不需要返回
-       * </pre>
-       *
-       * <code>int32 type = 2;</code>
-       * @param value The type to set.
+       * <code>int32 cmd = 2;</code>
+       * @param value The cmd to set.
        * @return This builder for chaining.
        */
-      public Builder setType(int value) {
+      public Builder setCmd(int value) {
         
-        type_ = value;
+        cmd_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       *传输类型，0需要返回  1 不需要返回
-       * </pre>
-       *
-       * <code>int32 type = 2;</code>
+       * <code>int32 cmd = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearType() {
+      public Builder clearCmd() {
         
-        type_ = 0;
+        cmd_ = 0;
         onChanged();
         return this;
       }
 
-      private java.lang.Object data_ = "";
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>string data = 3;</code>
+       * <code>bytes data = 3;</code>
        * @return The data.
        */
-      public java.lang.String getData() {
-        java.lang.Object ref = data_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          data_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
       }
       /**
-       * <code>string data = 3;</code>
-       * @return The bytes for data.
-       */
-      public com.google.protobuf.ByteString
-          getDataBytes() {
-        java.lang.Object ref = data_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          data_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string data = 3;</code>
+       * <code>bytes data = 3;</code>
        * @param value The data to set.
        * @return This builder for chaining.
        */
-      public Builder setData(
-          java.lang.String value) {
+      public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1888,28 +825,12 @@ public final class MessageBuf {
         return this;
       }
       /**
-       * <code>string data = 3;</code>
+       * <code>bytes data = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearData() {
         
         data_ = getDefaultInstance().getData();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string data = 3;</code>
-       * @param value The bytes for data to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDataBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        data_ = value;
         onChanged();
         return this;
       }
@@ -1926,99 +847,83 @@ public final class MessageBuf {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:MessageRequest)
+      // @@protoc_insertion_point(builder_scope:msg_req)
     }
 
-    // @@protoc_insertion_point(class_scope:MessageRequest)
-    private static final com.netty.client.protobuf.MessageBuf.MessageRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:msg_req)
+    private static final com.netty.client.protobuf.MessageBuf.msg_req DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.MessageRequest();
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.msg_req();
     }
 
-    public static com.netty.client.protobuf.MessageBuf.MessageRequest getDefaultInstance() {
+    public static com.netty.client.protobuf.MessageBuf.msg_req getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MessageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MessageRequest>() {
+    private static final com.google.protobuf.Parser<msg_req>
+        PARSER = new com.google.protobuf.AbstractParser<msg_req>() {
       @java.lang.Override
-      public MessageRequest parsePartialFrom(
+      public msg_req parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageRequest(input, extensionRegistry);
+        return new msg_req(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<MessageRequest> parser() {
+    public static com.google.protobuf.Parser<msg_req> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MessageRequest> getParserForType() {
+    public com.google.protobuf.Parser<msg_req> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageRequest getDefaultInstanceForType() {
+    public com.netty.client.protobuf.MessageBuf.msg_req getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface MessageResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:MessageResponse)
+  public interface msg_rspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:msg_rsp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 messageId = 1;</code>
-     * @return The messageId.
+     * <code>int32 cmd = 1;</code>
+     * @return The cmd.
      */
-    int getMessageId();
+    int getCmd();
 
     /**
-     * <code>int32 code = 2;</code>
-     * @return The code.
+     * <code>bytes data = 2;</code>
+     * @return The data.
      */
-    int getCode();
-
-    /**
-     * <code>string message = 3;</code>
-     * @return The message.
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>string message = 3;</code>
-     * @return The bytes for message.
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
+    com.google.protobuf.ByteString getData();
   }
   /**
-   * <pre>
-   * 消息响应
-   * </pre>
-   *
-   * Protobuf type {@code MessageResponse}
+   * Protobuf type {@code msg_rsp}
    */
-  public static final class MessageResponse extends
+  public static final class msg_rsp extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:MessageResponse)
-      MessageResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:msg_rsp)
+      msg_rspOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MessageResponse.newBuilder() to construct.
-    private MessageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use msg_rsp.newBuilder() to construct.
+    private msg_rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MessageResponse() {
-      message_ = "";
+    private msg_rsp() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MessageResponse();
+      return new msg_rsp();
     }
 
     @java.lang.Override
@@ -2026,7 +931,7 @@ public final class MessageBuf {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MessageResponse(
+    private msg_rsp(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2046,18 +951,12 @@ public final class MessageBuf {
               break;
             case 8: {
 
-              messageId_ = input.readInt32();
+              cmd_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 18: {
 
-              code_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
+              data_ = input.readBytes();
               break;
             }
             default: {
@@ -2083,75 +982,37 @@ public final class MessageBuf {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_MessageResponse_descriptor;
+      return com.netty.client.protobuf.MessageBuf.internal_static_msg_rsp_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.netty.client.protobuf.MessageBuf.internal_static_MessageResponse_fieldAccessorTable
+      return com.netty.client.protobuf.MessageBuf.internal_static_msg_rsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.netty.client.protobuf.MessageBuf.MessageResponse.class, com.netty.client.protobuf.MessageBuf.MessageResponse.Builder.class);
+              com.netty.client.protobuf.MessageBuf.msg_rsp.class, com.netty.client.protobuf.MessageBuf.msg_rsp.Builder.class);
     }
 
-    public static final int MESSAGEID_FIELD_NUMBER = 1;
-    private int messageId_;
+    public static final int CMD_FIELD_NUMBER = 1;
+    private int cmd_;
     /**
-     * <code>int32 messageId = 1;</code>
-     * @return The messageId.
+     * <code>int32 cmd = 1;</code>
+     * @return The cmd.
      */
     @java.lang.Override
-    public int getMessageId() {
-      return messageId_;
+    public int getCmd() {
+      return cmd_;
     }
 
-    public static final int CODE_FIELD_NUMBER = 2;
-    private int code_;
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_;
     /**
-     * <code>int32 code = 2;</code>
-     * @return The code.
+     * <code>bytes data = 2;</code>
+     * @return The data.
      */
     @java.lang.Override
-    public int getCode() {
-      return code_;
-    }
-
-    public static final int MESSAGE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object message_;
-    /**
-     * <code>string message = 3;</code>
-     * @return The message.
-     */
-    @java.lang.Override
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        message_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string message = 3;</code>
-     * @return The bytes for message.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.ByteString getData() {
+      return data_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2168,14 +1029,11 @@ public final class MessageBuf {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageId_ != 0) {
-        output.writeInt32(1, messageId_);
+      if (cmd_ != 0) {
+        output.writeInt32(1, cmd_);
       }
-      if (code_ != 0) {
-        output.writeInt32(2, code_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, message_);
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
       }
       unknownFields.writeTo(output);
     }
@@ -2186,16 +1044,13 @@ public final class MessageBuf {
       if (size != -1) return size;
 
       size = 0;
-      if (messageId_ != 0) {
+      if (cmd_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, messageId_);
+          .computeInt32Size(1, cmd_);
       }
-      if (code_ != 0) {
+      if (!data_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, code_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, message_);
+          .computeBytesSize(2, data_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2207,17 +1062,15 @@ public final class MessageBuf {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.MessageResponse)) {
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.msg_rsp)) {
         return super.equals(obj);
       }
-      com.netty.client.protobuf.MessageBuf.MessageResponse other = (com.netty.client.protobuf.MessageBuf.MessageResponse) obj;
+      com.netty.client.protobuf.MessageBuf.msg_rsp other = (com.netty.client.protobuf.MessageBuf.msg_rsp) obj;
 
-      if (getMessageId()
-          != other.getMessageId()) return false;
-      if (getCode()
-          != other.getCode()) return false;
-      if (!getMessage()
-          .equals(other.getMessage())) return false;
+      if (getCmd()
+          != other.getCmd()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2229,80 +1082,78 @@ public final class MessageBuf {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MESSAGEID_FIELD_NUMBER;
-      hash = (53 * hash) + getMessageId();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode();
-      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + CMD_FIELD_NUMBER;
+      hash = (53 * hash) + getCmd();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(byte[] data)
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(java.io.InputStream input)
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseDelimitedFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse parseFrom(
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2315,7 +1166,7 @@ public final class MessageBuf {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.MessageResponse prototype) {
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.msg_rsp prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2331,30 +1182,26 @@ public final class MessageBuf {
       return builder;
     }
     /**
-     * <pre>
-     * 消息响应
-     * </pre>
-     *
-     * Protobuf type {@code MessageResponse}
+     * Protobuf type {@code msg_rsp}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:MessageResponse)
-        com.netty.client.protobuf.MessageBuf.MessageResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:msg_rsp)
+        com.netty.client.protobuf.MessageBuf.msg_rspOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageResponse_descriptor;
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_rsp_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageResponse_fieldAccessorTable
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_rsp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.netty.client.protobuf.MessageBuf.MessageResponse.class, com.netty.client.protobuf.MessageBuf.MessageResponse.Builder.class);
+                com.netty.client.protobuf.MessageBuf.msg_rsp.class, com.netty.client.protobuf.MessageBuf.msg_rsp.Builder.class);
       }
 
-      // Construct using com.netty.client.protobuf.MessageBuf.MessageResponse.newBuilder()
+      // Construct using com.netty.client.protobuf.MessageBuf.msg_rsp.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2372,11 +1219,9 @@ public final class MessageBuf {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        messageId_ = 0;
+        cmd_ = 0;
 
-        code_ = 0;
-
-        message_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
 
         return this;
       }
@@ -2384,17 +1229,17 @@ public final class MessageBuf {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.netty.client.protobuf.MessageBuf.internal_static_MessageResponse_descriptor;
+        return com.netty.client.protobuf.MessageBuf.internal_static_msg_rsp_descriptor;
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageResponse getDefaultInstanceForType() {
-        return com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance();
+      public com.netty.client.protobuf.MessageBuf.msg_rsp getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.msg_rsp.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageResponse build() {
-        com.netty.client.protobuf.MessageBuf.MessageResponse result = buildPartial();
+      public com.netty.client.protobuf.MessageBuf.msg_rsp build() {
+        com.netty.client.protobuf.MessageBuf.msg_rsp result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2402,11 +1247,10 @@ public final class MessageBuf {
       }
 
       @java.lang.Override
-      public com.netty.client.protobuf.MessageBuf.MessageResponse buildPartial() {
-        com.netty.client.protobuf.MessageBuf.MessageResponse result = new com.netty.client.protobuf.MessageBuf.MessageResponse(this);
-        result.messageId_ = messageId_;
-        result.code_ = code_;
-        result.message_ = message_;
+      public com.netty.client.protobuf.MessageBuf.msg_rsp buildPartial() {
+        com.netty.client.protobuf.MessageBuf.msg_rsp result = new com.netty.client.protobuf.MessageBuf.msg_rsp(this);
+        result.cmd_ = cmd_;
+        result.data_ = data_;
         onBuilt();
         return result;
       }
@@ -2445,24 +1289,587 @@ public final class MessageBuf {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.netty.client.protobuf.MessageBuf.MessageResponse) {
-          return mergeFrom((com.netty.client.protobuf.MessageBuf.MessageResponse)other);
+        if (other instanceof com.netty.client.protobuf.MessageBuf.msg_rsp) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.msg_rsp)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.MessageResponse other) {
-        if (other == com.netty.client.protobuf.MessageBuf.MessageResponse.getDefaultInstance()) return this;
-        if (other.getMessageId() != 0) {
-          setMessageId(other.getMessageId());
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.msg_rsp other) {
+        if (other == com.netty.client.protobuf.MessageBuf.msg_rsp.getDefaultInstance()) return this;
+        if (other.getCmd() != 0) {
+          setCmd(other.getCmd());
         }
-        if (other.getCode() != 0) {
-          setCode(other.getCode());
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
         }
-        if (!other.getMessage().isEmpty()) {
-          message_ = other.message_;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.msg_rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.msg_rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int cmd_ ;
+      /**
+       * <code>int32 cmd = 1;</code>
+       * @return The cmd.
+       */
+      @java.lang.Override
+      public int getCmd() {
+        return cmd_;
+      }
+      /**
+       * <code>int32 cmd = 1;</code>
+       * @param value The cmd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmd(int value) {
+        
+        cmd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 cmd = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCmd() {
+        
+        cmd_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2;</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:msg_rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:msg_rsp)
+    private static final com.netty.client.protobuf.MessageBuf.msg_rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.msg_rsp();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.msg_rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<msg_rsp>
+        PARSER = new com.google.protobuf.AbstractParser<msg_rsp>() {
+      @java.lang.Override
+      public msg_rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new msg_rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<msg_rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<msg_rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.msg_rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface cm_check_versionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cm_check_version)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+  }
+  /**
+   * <pre>
+   *查看最新版本
+   * </pre>
+   *
+   * Protobuf type {@code cm_check_version}
+   */
+  public static final class cm_check_version extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cm_check_version)
+      cm_check_versionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use cm_check_version.newBuilder() to construct.
+    private cm_check_version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private cm_check_version() {
+      type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new cm_check_version();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private cm_check_version(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_version_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_version_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.cm_check_version.class, com.netty.client.protobuf.MessageBuf.cm_check_version.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object type_;
+    /**
+     * <code>string type = 1;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.cm_check_version)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.cm_check_version other = (com.netty.client.protobuf.MessageBuf.cm_check_version) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.cm_check_version prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *查看最新版本
+     * </pre>
+     *
+     * Protobuf type {@code cm_check_version}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cm_check_version)
+        com.netty.client.protobuf.MessageBuf.cm_check_versionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_version_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_version_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.cm_check_version.class, com.netty.client.protobuf.MessageBuf.cm_check_version.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.cm_check_version.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        type_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_version_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_version getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.cm_check_version.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_version build() {
+        com.netty.client.protobuf.MessageBuf.cm_check_version result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_version buildPartial() {
+        com.netty.client.protobuf.MessageBuf.cm_check_version result = new com.netty.client.protobuf.MessageBuf.cm_check_version(this);
+        result.type_ = type_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.cm_check_version) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.cm_check_version)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.cm_check_version other) {
+        if (other == com.netty.client.protobuf.MessageBuf.cm_check_version.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2480,11 +1887,11 @@ public final class MessageBuf {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.netty.client.protobuf.MessageBuf.MessageResponse parsedMessage = null;
+        com.netty.client.protobuf.MessageBuf.cm_check_version parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.netty.client.protobuf.MessageBuf.MessageResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.cm_check_version) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2494,140 +1901,78 @@ public final class MessageBuf {
         return this;
       }
 
-      private int messageId_ ;
+      private java.lang.Object type_ = "";
       /**
-       * <code>int32 messageId = 1;</code>
-       * @return The messageId.
+       * <code>string type = 1;</code>
+       * @return The type.
        */
-      @java.lang.Override
-      public int getMessageId() {
-        return messageId_;
-      }
-      /**
-       * <code>int32 messageId = 1;</code>
-       * @param value The messageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMessageId(int value) {
-        
-        messageId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 messageId = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMessageId() {
-        
-        messageId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int code_ ;
-      /**
-       * <code>int32 code = 2;</code>
-       * @return The code.
-       */
-      @java.lang.Override
-      public int getCode() {
-        return code_;
-      }
-      /**
-       * <code>int32 code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(int value) {
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object message_ = "";
-      /**
-       * <code>string message = 3;</code>
-       * @return The message.
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          message_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string message = 3;</code>
-       * @return The bytes for message.
+       * <code>string type = 1;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          message_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string message = 3;</code>
-       * @param value The message to set.
+       * <code>string type = 1;</code>
+       * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setMessage(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        message_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 3;</code>
+       * <code>string type = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMessage() {
+      public Builder clearType() {
         
-        message_ = getDefaultInstance().getMessage();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 3;</code>
-       * @param value The bytes for message to set.
+       * <code>string type = 1;</code>
+       * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
-      public Builder setMessageBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        message_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
@@ -2644,61 +1989,3276 @@ public final class MessageBuf {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:MessageResponse)
+      // @@protoc_insertion_point(builder_scope:cm_check_version)
     }
 
-    // @@protoc_insertion_point(class_scope:MessageResponse)
-    private static final com.netty.client.protobuf.MessageBuf.MessageResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:cm_check_version)
+    private static final com.netty.client.protobuf.MessageBuf.cm_check_version DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.MessageResponse();
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.cm_check_version();
     }
 
-    public static com.netty.client.protobuf.MessageBuf.MessageResponse getDefaultInstance() {
+    public static com.netty.client.protobuf.MessageBuf.cm_check_version getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MessageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MessageResponse>() {
+    private static final com.google.protobuf.Parser<cm_check_version>
+        PARSER = new com.google.protobuf.AbstractParser<cm_check_version>() {
       @java.lang.Override
-      public MessageResponse parsePartialFrom(
+      public cm_check_version parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageResponse(input, extensionRegistry);
+        return new cm_check_version(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<MessageResponse> parser() {
+    public static com.google.protobuf.Parser<cm_check_version> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MessageResponse> getParserForType() {
+    public com.google.protobuf.Parser<cm_check_version> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.netty.client.protobuf.MessageBuf.MessageResponse getDefaultInstanceForType() {
+    public com.netty.client.protobuf.MessageBuf.cm_check_version getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface sm_check_versionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sm_check_version)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *版本信息
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     *版本信息
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+  }
+  /**
+   * Protobuf type {@code sm_check_version}
+   */
+  public static final class sm_check_version extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sm_check_version)
+      sm_check_versionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use sm_check_version.newBuilder() to construct.
+    private sm_check_version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private sm_check_version() {
+      version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new sm_check_version();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private sm_check_version(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_version_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_version_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.sm_check_version.class, com.netty.client.protobuf.MessageBuf.sm_check_version.Builder.class);
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object version_;
+    /**
+     * <pre>
+     *版本信息
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *版本信息
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.sm_check_version)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.sm_check_version other = (com.netty.client.protobuf.MessageBuf.sm_check_version) obj;
+
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.sm_check_version prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sm_check_version}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sm_check_version)
+        com.netty.client.protobuf.MessageBuf.sm_check_versionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_version_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_version_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.sm_check_version.class, com.netty.client.protobuf.MessageBuf.sm_check_version.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.sm_check_version.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        version_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_version_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_version getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.sm_check_version.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_version build() {
+        com.netty.client.protobuf.MessageBuf.sm_check_version result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_version buildPartial() {
+        com.netty.client.protobuf.MessageBuf.sm_check_version result = new com.netty.client.protobuf.MessageBuf.sm_check_version(this);
+        result.version_ = version_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.sm_check_version) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.sm_check_version)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.sm_check_version other) {
+        if (other == com.netty.client.protobuf.MessageBuf.sm_check_version.getDefaultInstance()) return this;
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.sm_check_version parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.sm_check_version) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <pre>
+       *版本信息
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *版本信息
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *版本信息
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *版本信息
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *版本信息
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sm_check_version)
+    }
+
+    // @@protoc_insertion_point(class_scope:sm_check_version)
+    private static final com.netty.client.protobuf.MessageBuf.sm_check_version DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.sm_check_version();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_check_version getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<sm_check_version>
+        PARSER = new com.google.protobuf.AbstractParser<sm_check_version>() {
+      @java.lang.Override
+      public sm_check_version parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new sm_check_version(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<sm_check_version> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<sm_check_version> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.sm_check_version getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface cm_check_noticeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cm_check_notice)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   *查看公告
+   * </pre>
+   *
+   * Protobuf type {@code cm_check_notice}
+   */
+  public static final class cm_check_notice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cm_check_notice)
+      cm_check_noticeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use cm_check_notice.newBuilder() to construct.
+    private cm_check_notice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private cm_check_notice() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new cm_check_notice();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private cm_check_notice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_notice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_notice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.cm_check_notice.class, com.netty.client.protobuf.MessageBuf.cm_check_notice.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.cm_check_notice)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.cm_check_notice other = (com.netty.client.protobuf.MessageBuf.cm_check_notice) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.cm_check_notice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *查看公告
+     * </pre>
+     *
+     * Protobuf type {@code cm_check_notice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cm_check_notice)
+        com.netty.client.protobuf.MessageBuf.cm_check_noticeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_notice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_notice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.cm_check_notice.class, com.netty.client.protobuf.MessageBuf.cm_check_notice.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.cm_check_notice.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_check_notice_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_notice getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.cm_check_notice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_notice build() {
+        com.netty.client.protobuf.MessageBuf.cm_check_notice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_check_notice buildPartial() {
+        com.netty.client.protobuf.MessageBuf.cm_check_notice result = new com.netty.client.protobuf.MessageBuf.cm_check_notice(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.cm_check_notice) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.cm_check_notice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.cm_check_notice other) {
+        if (other == com.netty.client.protobuf.MessageBuf.cm_check_notice.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.cm_check_notice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.cm_check_notice) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cm_check_notice)
+    }
+
+    // @@protoc_insertion_point(class_scope:cm_check_notice)
+    private static final com.netty.client.protobuf.MessageBuf.cm_check_notice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.cm_check_notice();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.cm_check_notice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<cm_check_notice>
+        PARSER = new com.google.protobuf.AbstractParser<cm_check_notice>() {
+      @java.lang.Override
+      public cm_check_notice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new cm_check_notice(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<cm_check_notice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<cm_check_notice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.cm_check_notice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface sm_check_noticeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sm_check_notice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *公告
+     * </pre>
+     *
+     * <code>string notice = 1;</code>
+     * @return The notice.
+     */
+    java.lang.String getNotice();
+    /**
+     * <pre>
+     *公告
+     * </pre>
+     *
+     * <code>string notice = 1;</code>
+     * @return The bytes for notice.
+     */
+    com.google.protobuf.ByteString
+        getNoticeBytes();
+  }
+  /**
+   * Protobuf type {@code sm_check_notice}
+   */
+  public static final class sm_check_notice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sm_check_notice)
+      sm_check_noticeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use sm_check_notice.newBuilder() to construct.
+    private sm_check_notice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private sm_check_notice() {
+      notice_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new sm_check_notice();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private sm_check_notice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notice_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_notice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_notice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.sm_check_notice.class, com.netty.client.protobuf.MessageBuf.sm_check_notice.Builder.class);
+    }
+
+    public static final int NOTICE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object notice_;
+    /**
+     * <pre>
+     *公告
+     * </pre>
+     *
+     * <code>string notice = 1;</code>
+     * @return The notice.
+     */
+    @java.lang.Override
+    public java.lang.String getNotice() {
+      java.lang.Object ref = notice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *公告
+     * </pre>
+     *
+     * <code>string notice = 1;</code>
+     * @return The bytes for notice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNoticeBytes() {
+      java.lang.Object ref = notice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, notice_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, notice_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.sm_check_notice)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.sm_check_notice other = (com.netty.client.protobuf.MessageBuf.sm_check_notice) obj;
+
+      if (!getNotice()
+          .equals(other.getNotice())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NOTICE_FIELD_NUMBER;
+      hash = (53 * hash) + getNotice().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.sm_check_notice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sm_check_notice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sm_check_notice)
+        com.netty.client.protobuf.MessageBuf.sm_check_noticeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_notice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_notice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.sm_check_notice.class, com.netty.client.protobuf.MessageBuf.sm_check_notice.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.sm_check_notice.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        notice_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_check_notice_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_notice getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.sm_check_notice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_notice build() {
+        com.netty.client.protobuf.MessageBuf.sm_check_notice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_check_notice buildPartial() {
+        com.netty.client.protobuf.MessageBuf.sm_check_notice result = new com.netty.client.protobuf.MessageBuf.sm_check_notice(this);
+        result.notice_ = notice_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.sm_check_notice) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.sm_check_notice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.sm_check_notice other) {
+        if (other == com.netty.client.protobuf.MessageBuf.sm_check_notice.getDefaultInstance()) return this;
+        if (!other.getNotice().isEmpty()) {
+          notice_ = other.notice_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.sm_check_notice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.sm_check_notice) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object notice_ = "";
+      /**
+       * <pre>
+       *公告
+       * </pre>
+       *
+       * <code>string notice = 1;</code>
+       * @return The notice.
+       */
+      public java.lang.String getNotice() {
+        java.lang.Object ref = notice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *公告
+       * </pre>
+       *
+       * <code>string notice = 1;</code>
+       * @return The bytes for notice.
+       */
+      public com.google.protobuf.ByteString
+          getNoticeBytes() {
+        java.lang.Object ref = notice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *公告
+       * </pre>
+       *
+       * <code>string notice = 1;</code>
+       * @param value The notice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotice(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notice_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *公告
+       * </pre>
+       *
+       * <code>string notice = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNotice() {
+        
+        notice_ = getDefaultInstance().getNotice();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *公告
+       * </pre>
+       *
+       * <code>string notice = 1;</code>
+       * @param value The bytes for notice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoticeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notice_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sm_check_notice)
+    }
+
+    // @@protoc_insertion_point(class_scope:sm_check_notice)
+    private static final com.netty.client.protobuf.MessageBuf.sm_check_notice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.sm_check_notice();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_check_notice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<sm_check_notice>
+        PARSER = new com.google.protobuf.AbstractParser<sm_check_notice>() {
+      @java.lang.Override
+      public sm_check_notice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new sm_check_notice(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<sm_check_notice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<sm_check_notice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.sm_check_notice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface cm_sync_server_timeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cm_sync_server_time)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   *同步服务器时间
+   * </pre>
+   *
+   * Protobuf type {@code cm_sync_server_time}
+   */
+  public static final class cm_sync_server_time extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cm_sync_server_time)
+      cm_sync_server_timeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use cm_sync_server_time.newBuilder() to construct.
+    private cm_sync_server_time(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private cm_sync_server_time() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new cm_sync_server_time();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private cm_sync_server_time(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_sync_server_time_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_cm_sync_server_time_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.cm_sync_server_time.class, com.netty.client.protobuf.MessageBuf.cm_sync_server_time.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.cm_sync_server_time)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.cm_sync_server_time other = (com.netty.client.protobuf.MessageBuf.cm_sync_server_time) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.cm_sync_server_time prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *同步服务器时间
+     * </pre>
+     *
+     * Protobuf type {@code cm_sync_server_time}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cm_sync_server_time)
+        com.netty.client.protobuf.MessageBuf.cm_sync_server_timeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_sync_server_time_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_sync_server_time_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.cm_sync_server_time.class, com.netty.client.protobuf.MessageBuf.cm_sync_server_time.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.cm_sync_server_time.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_cm_sync_server_time_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_sync_server_time getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.cm_sync_server_time.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_sync_server_time build() {
+        com.netty.client.protobuf.MessageBuf.cm_sync_server_time result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.cm_sync_server_time buildPartial() {
+        com.netty.client.protobuf.MessageBuf.cm_sync_server_time result = new com.netty.client.protobuf.MessageBuf.cm_sync_server_time(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.cm_sync_server_time) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.cm_sync_server_time)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.cm_sync_server_time other) {
+        if (other == com.netty.client.protobuf.MessageBuf.cm_sync_server_time.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.cm_sync_server_time parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.cm_sync_server_time) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cm_sync_server_time)
+    }
+
+    // @@protoc_insertion_point(class_scope:cm_sync_server_time)
+    private static final com.netty.client.protobuf.MessageBuf.cm_sync_server_time DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.cm_sync_server_time();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.cm_sync_server_time getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<cm_sync_server_time>
+        PARSER = new com.google.protobuf.AbstractParser<cm_sync_server_time>() {
+      @java.lang.Override
+      public cm_sync_server_time parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new cm_sync_server_time(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<cm_sync_server_time> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<cm_sync_server_time> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.cm_sync_server_time getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface sm_sync_server_timeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sm_sync_server_time)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *服务器时间（时间戳）
+     * </pre>
+     *
+     * <code>int64 serverTime = 1;</code>
+     * @return The serverTime.
+     */
+    long getServerTime();
+  }
+  /**
+   * Protobuf type {@code sm_sync_server_time}
+   */
+  public static final class sm_sync_server_time extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sm_sync_server_time)
+      sm_sync_server_timeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use sm_sync_server_time.newBuilder() to construct.
+    private sm_sync_server_time(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private sm_sync_server_time() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new sm_sync_server_time();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private sm_sync_server_time(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              serverTime_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_sync_server_time_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_sync_server_time_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.sm_sync_server_time.class, com.netty.client.protobuf.MessageBuf.sm_sync_server_time.Builder.class);
+    }
+
+    public static final int SERVERTIME_FIELD_NUMBER = 1;
+    private long serverTime_;
+    /**
+     * <pre>
+     *服务器时间（时间戳）
+     * </pre>
+     *
+     * <code>int64 serverTime = 1;</code>
+     * @return The serverTime.
+     */
+    @java.lang.Override
+    public long getServerTime() {
+      return serverTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (serverTime_ != 0L) {
+        output.writeInt64(1, serverTime_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (serverTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, serverTime_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.sm_sync_server_time)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.sm_sync_server_time other = (com.netty.client.protobuf.MessageBuf.sm_sync_server_time) obj;
+
+      if (getServerTime()
+          != other.getServerTime()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVERTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getServerTime());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.sm_sync_server_time prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sm_sync_server_time}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sm_sync_server_time)
+        com.netty.client.protobuf.MessageBuf.sm_sync_server_timeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_sync_server_time_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_sync_server_time_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.sm_sync_server_time.class, com.netty.client.protobuf.MessageBuf.sm_sync_server_time.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.sm_sync_server_time.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serverTime_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_sync_server_time_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_sync_server_time getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.sm_sync_server_time.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_sync_server_time build() {
+        com.netty.client.protobuf.MessageBuf.sm_sync_server_time result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_sync_server_time buildPartial() {
+        com.netty.client.protobuf.MessageBuf.sm_sync_server_time result = new com.netty.client.protobuf.MessageBuf.sm_sync_server_time(this);
+        result.serverTime_ = serverTime_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.sm_sync_server_time) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.sm_sync_server_time)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.sm_sync_server_time other) {
+        if (other == com.netty.client.protobuf.MessageBuf.sm_sync_server_time.getDefaultInstance()) return this;
+        if (other.getServerTime() != 0L) {
+          setServerTime(other.getServerTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.sm_sync_server_time parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.sm_sync_server_time) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long serverTime_ ;
+      /**
+       * <pre>
+       *服务器时间（时间戳）
+       * </pre>
+       *
+       * <code>int64 serverTime = 1;</code>
+       * @return The serverTime.
+       */
+      @java.lang.Override
+      public long getServerTime() {
+        return serverTime_;
+      }
+      /**
+       * <pre>
+       *服务器时间（时间戳）
+       * </pre>
+       *
+       * <code>int64 serverTime = 1;</code>
+       * @param value The serverTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerTime(long value) {
+        
+        serverTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *服务器时间（时间戳）
+       * </pre>
+       *
+       * <code>int64 serverTime = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerTime() {
+        
+        serverTime_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sm_sync_server_time)
+    }
+
+    // @@protoc_insertion_point(class_scope:sm_sync_server_time)
+    private static final com.netty.client.protobuf.MessageBuf.sm_sync_server_time DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.sm_sync_server_time();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_sync_server_time getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<sm_sync_server_time>
+        PARSER = new com.google.protobuf.AbstractParser<sm_sync_server_time>() {
+      @java.lang.Override
+      public sm_sync_server_time parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new sm_sync_server_time(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<sm_sync_server_time> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<sm_sync_server_time> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.sm_sync_server_time getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface sm_notify_textOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sm_notify_text)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *提示信息
+     * </pre>
+     *
+     * <code>string msg = 1;</code>
+     * @return The msg.
+     */
+    java.lang.String getMsg();
+    /**
+     * <pre>
+     *提示信息
+     * </pre>
+     *
+     * <code>string msg = 1;</code>
+     * @return The bytes for msg.
+     */
+    com.google.protobuf.ByteString
+        getMsgBytes();
+  }
+  /**
+   * Protobuf type {@code sm_notify_text}
+   */
+  public static final class sm_notify_text extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sm_notify_text)
+      sm_notify_textOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use sm_notify_text.newBuilder() to construct.
+    private sm_notify_text(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private sm_notify_text() {
+      msg_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new sm_notify_text();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private sm_notify_text(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              msg_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_notify_text_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.netty.client.protobuf.MessageBuf.internal_static_sm_notify_text_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.netty.client.protobuf.MessageBuf.sm_notify_text.class, com.netty.client.protobuf.MessageBuf.sm_notify_text.Builder.class);
+    }
+
+    public static final int MSG_FIELD_NUMBER = 1;
+    private volatile java.lang.Object msg_;
+    /**
+     * <pre>
+     *提示信息
+     * </pre>
+     *
+     * <code>string msg = 1;</code>
+     * @return The msg.
+     */
+    @java.lang.Override
+    public java.lang.String getMsg() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *提示信息
+     * </pre>
+     *
+     * <code>string msg = 1;</code>
+     * @return The bytes for msg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMsgBytes() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msg_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msg_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.netty.client.protobuf.MessageBuf.sm_notify_text)) {
+        return super.equals(obj);
+      }
+      com.netty.client.protobuf.MessageBuf.sm_notify_text other = (com.netty.client.protobuf.MessageBuf.sm_notify_text) obj;
+
+      if (!getMsg()
+          .equals(other.getMsg())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.netty.client.protobuf.MessageBuf.sm_notify_text prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sm_notify_text}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sm_notify_text)
+        com.netty.client.protobuf.MessageBuf.sm_notify_textOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_notify_text_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_notify_text_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.netty.client.protobuf.MessageBuf.sm_notify_text.class, com.netty.client.protobuf.MessageBuf.sm_notify_text.Builder.class);
+      }
+
+      // Construct using com.netty.client.protobuf.MessageBuf.sm_notify_text.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        msg_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.netty.client.protobuf.MessageBuf.internal_static_sm_notify_text_descriptor;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_notify_text getDefaultInstanceForType() {
+        return com.netty.client.protobuf.MessageBuf.sm_notify_text.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_notify_text build() {
+        com.netty.client.protobuf.MessageBuf.sm_notify_text result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.netty.client.protobuf.MessageBuf.sm_notify_text buildPartial() {
+        com.netty.client.protobuf.MessageBuf.sm_notify_text result = new com.netty.client.protobuf.MessageBuf.sm_notify_text(this);
+        result.msg_ = msg_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.netty.client.protobuf.MessageBuf.sm_notify_text) {
+          return mergeFrom((com.netty.client.protobuf.MessageBuf.sm_notify_text)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.netty.client.protobuf.MessageBuf.sm_notify_text other) {
+        if (other == com.netty.client.protobuf.MessageBuf.sm_notify_text.getDefaultInstance()) return this;
+        if (!other.getMsg().isEmpty()) {
+          msg_ = other.msg_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.netty.client.protobuf.MessageBuf.sm_notify_text parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.netty.client.protobuf.MessageBuf.sm_notify_text) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object msg_ = "";
+      /**
+       * <pre>
+       *提示信息
+       * </pre>
+       *
+       * <code>string msg = 1;</code>
+       * @return The msg.
+       */
+      public java.lang.String getMsg() {
+        java.lang.Object ref = msg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *提示信息
+       * </pre>
+       *
+       * <code>string msg = 1;</code>
+       * @return The bytes for msg.
+       */
+      public com.google.protobuf.ByteString
+          getMsgBytes() {
+        java.lang.Object ref = msg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *提示信息
+       * </pre>
+       *
+       * <code>string msg = 1;</code>
+       * @param value The msg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *提示信息
+       * </pre>
+       *
+       * <code>string msg = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsg() {
+        
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *提示信息
+       * </pre>
+       *
+       * <code>string msg = 1;</code>
+       * @param value The bytes for msg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sm_notify_text)
+    }
+
+    // @@protoc_insertion_point(class_scope:sm_notify_text)
+    private static final com.netty.client.protobuf.MessageBuf.sm_notify_text DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.netty.client.protobuf.MessageBuf.sm_notify_text();
+    }
+
+    public static com.netty.client.protobuf.MessageBuf.sm_notify_text getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<sm_notify_text>
+        PARSER = new com.google.protobuf.AbstractParser<sm_notify_text>() {
+      @java.lang.Override
+      public sm_notify_text parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new sm_notify_text(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<sm_notify_text> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<sm_notify_text> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.netty.client.protobuf.MessageBuf.sm_notify_text getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Message_descriptor;
+    internal_static_msg_req_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Message_fieldAccessorTable;
+      internal_static_msg_req_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MessageRequest_descriptor;
+    internal_static_msg_rsp_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_MessageRequest_fieldAccessorTable;
+      internal_static_msg_rsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MessageResponse_descriptor;
+    internal_static_cm_check_version_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_MessageResponse_fieldAccessorTable;
+      internal_static_cm_check_version_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sm_check_version_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sm_check_version_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cm_check_notice_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cm_check_notice_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sm_check_notice_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sm_check_notice_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cm_sync_server_time_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cm_sync_server_time_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sm_sync_server_time_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sm_sync_server_time_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sm_notify_text_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sm_notify_text_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2709,39 +5269,80 @@ public final class MessageBuf {
   static {
     java.lang.String[] descriptorData = {
       "\n5src/main/java/com/netty/client/protobu" +
-      "f/message.proto\"\275\001\n\007Message\022#\n\010packType\030" +
-      "\001 \001(\0162\021.Message.PackType\022)\n\016messageReque" +
-      "st\030\002 \001(\0132\017.MessageRequestH\000\022+\n\017messageRe" +
-      "sponse\030\003 \001(\0132\020.MessageResponseH\000\"-\n\010Pack" +
-      "Type\022\017\n\013MESSAGE_REQ\020\000\022\020\n\014MESSAGE_RESP\020\001B" +
-      "\006\n\004Pack\"?\n\016MessageRequest\022\021\n\tmessageId\030\001" +
-      " \001(\005\022\014\n\004type\030\002 \001(\005\022\014\n\004data\030\003 \001(\t\"C\n\017Mess" +
-      "ageResponse\022\021\n\tmessageId\030\001 \001(\005\022\014\n\004code\030\002" +
-      " \001(\005\022\017\n\007message\030\003 \001(\tB\'\n\031com.netty.clien" +
-      "t.protobufB\nMessageBufb\006proto3"
+      "f/message.proto\"4\n\007msg_req\022\016\n\006msg_id\030\001 \001" +
+      "(\003\022\013\n\003cmd\030\002 \001(\005\022\014\n\004data\030\003 \001(\014\"$\n\007msg_rsp" +
+      "\022\013\n\003cmd\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\" \n\020cm_check_" +
+      "version\022\014\n\004type\030\001 \001(\t\"#\n\020sm_check_versio" +
+      "n\022\017\n\007version\030\001 \001(\t\"\021\n\017cm_check_notice\"!\n" +
+      "\017sm_check_notice\022\016\n\006notice\030\001 \001(\t\"\025\n\023cm_s" +
+      "ync_server_time\")\n\023sm_sync_server_time\022\022" +
+      "\n\nserverTime\030\001 \001(\003\"\035\n\016sm_notify_text\022\013\n\003" +
+      "msg\030\001 \001(\t*\265\001\n\004GAME\022\014\n\010CmdStart\020\000\022\025\n\020G_CM" +
+      "CheckVersion\020\350\007\022\024\n\017G_CMCheckNotice\020\351\007\022\027\n" +
+      "\022G_CMSyncServerTime\020\352\007\022\025\n\020G_SMCheckVersi" +
+      "on\020\321\017\022\024\n\017G_SMCheckNotice\020\322\017\022\027\n\022G_SMSyncS" +
+      "erverTime\020\323\017\022\023\n\016G_SMNotifyText\020\251FB\'\n\031com" +
+      ".netty.client.protobufB\nMessageBufb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_Message_descriptor =
+    internal_static_msg_req_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Message_fieldAccessorTable = new
+    internal_static_msg_req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Message_descriptor,
-        new java.lang.String[] { "PackType", "MessageRequest", "MessageResponse", "Pack", });
-    internal_static_MessageRequest_descriptor =
+        internal_static_msg_req_descriptor,
+        new java.lang.String[] { "MsgId", "Cmd", "Data", });
+    internal_static_msg_rsp_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_MessageRequest_fieldAccessorTable = new
+    internal_static_msg_rsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_MessageRequest_descriptor,
-        new java.lang.String[] { "MessageId", "Type", "Data", });
-    internal_static_MessageResponse_descriptor =
+        internal_static_msg_rsp_descriptor,
+        new java.lang.String[] { "Cmd", "Data", });
+    internal_static_cm_check_version_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_MessageResponse_fieldAccessorTable = new
+    internal_static_cm_check_version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_MessageResponse_descriptor,
-        new java.lang.String[] { "MessageId", "Code", "Message", });
+        internal_static_cm_check_version_descriptor,
+        new java.lang.String[] { "Type", });
+    internal_static_sm_check_version_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_sm_check_version_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sm_check_version_descriptor,
+        new java.lang.String[] { "Version", });
+    internal_static_cm_check_notice_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cm_check_notice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cm_check_notice_descriptor,
+        new java.lang.String[] { });
+    internal_static_sm_check_notice_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_sm_check_notice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sm_check_notice_descriptor,
+        new java.lang.String[] { "Notice", });
+    internal_static_cm_sync_server_time_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_cm_sync_server_time_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cm_sync_server_time_descriptor,
+        new java.lang.String[] { });
+    internal_static_sm_sync_server_time_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_sm_sync_server_time_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sm_sync_server_time_descriptor,
+        new java.lang.String[] { "ServerTime", });
+    internal_static_sm_notify_text_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_sm_notify_text_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sm_notify_text_descriptor,
+        new java.lang.String[] { "Msg", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
