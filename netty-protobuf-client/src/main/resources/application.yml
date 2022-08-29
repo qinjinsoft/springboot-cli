@@ -5,12 +5,6 @@ spring:
   application:
     name: tcp-client
 
-# tcp
-netty:
-  client-port: 19999
-  server-ip: 127.0.0.1
-  server-port: 8001
-
 # 日记配置
 logging:
   level:

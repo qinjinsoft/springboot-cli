@@ -14,7 +14,7 @@
     <name>nettyClient</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <netty-all.version>4.1.75.Final</netty-all.version>
         <fastjson.version>1.2.80</fastjson.version>
         <protobuf-java.version>3.20.1-rc-1</protobuf-java.version>
