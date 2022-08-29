@@ -1,6 +1,8 @@
 package com.netty.client.handler;
 
+import com.google.protobuf.GeneratedMessageV3;
 import com.netty.client.protobuf.MessageBuf;
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
@@ -21,7 +23,6 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("当前握手的状态"+this.handshaker.isHandshakeComplete());
         Channel ch = ctx.channel();
         FullHttpResponse response;
         //进行握手操作
@@ -32,7 +33,7 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
                 this.handshaker.finishHandshake(ch, response);
                 //设置成功
                 this.handshakeFuture.setSuccess();
-                System.out.println("服务端的消息"+response.headers());
+                System.out.println("握手成功"+response.headers());
             } catch (WebSocketHandshakeException var7) {
                 FullHttpResponse res = (FullHttpResponse)msg;
                 String errorMsg = String.format("握手失败,status:%s,reason:%s", res.status(), res.content().toString(CharsetUtil.UTF_8));
@@ -51,8 +52,29 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
             }
             //二进制信息
             if (frame instanceof BinaryWebSocketFrame) {
-                BinaryWebSocketFrame binFrame = (BinaryWebSocketFrame)frame;
-                System.out.println("BinaryWebSocketFrame");
+                // WebSocket 二进制消息会通过 HttpServerCodec 解码成 BinaryWebSocketFrame 类对象
+                frame = (BinaryWebSocketFrame) msg;
+                ByteBuf byteBuf = frame.content();
+
+                byteBuf.readShort(); // 读取消息的长度
+                int msgCode = byteBuf.readShort(); // 读取消息的编号
+
+                // 拿到消息体
+                byte[] msgBody = new byte[byteBuf.readableBytes()];
+                byteBuf.readBytes(msgBody);
+                log.info("channelRead---msgBody>{}",msgBody);
+                log.info("channelRead---frame>{}",frame);
+                GeneratedMessageV3 cmd = null;
+
+                switch (msgCode) {
+                    case MessageBuf.GAME.G_CMCheckVersion_VALUE:
+                        cmd = MessageBuf.cm_check_version.parseFrom(msgBody);
+                        break;
+                    default:
+                        cmd = MessageBuf.msg_req.parseFrom(msgBody);
+                        break;
+                }
+                log.info("接收到服务器的响应：{}",cmd);
             }
             //ping信息
             if (frame instanceof PongWebSocketFrame) {
