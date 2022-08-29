@@ -43,7 +43,7 @@ public class HttpProtobufApi {
         NetMessage request = new NetMessage();
         request.setType("9");
         request.setName("test");
-        MessageBuf.msg_req.Builder builder = MessageBuf.msg_req.newBuilder().setMsgId(1000).setData(ByteString.copyFromUtf8(JSONObject.toJSONString(request)));
+        MessageBuf.msg_req.Builder builder = MessageBuf.msg_req.newBuilder().setMessageId(1000).setData(ByteString.copyFromUtf8(JSONObject.toJSONString(request)));
         tcpClient.getSocketChannel().writeAndFlush(builder);
         return "发送成功";
     }
