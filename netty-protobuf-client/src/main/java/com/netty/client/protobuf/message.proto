@@ -20,8 +20,8 @@ enum GAME {
 }
 
 message msg_req {
-    int64  cmd   = 1;    //消息序列号，客户端自增防重
-    int32  messageId      = 2;
+    int64  msg_id   = 1;    //消息序列号，客户端自增防重
+    int32  cmd      = 2;
     bytes data 		= 3;
 }
 
@@ -29,3 +29,35 @@ message msg_rsp {
     int32  cmd       = 1;
     bytes data 		 = 2;
 }
+
+//查看最新版本
+message cm_check_version{
+
+}
+
+message sm_check_version{
+    string     version = 1;		//版本信息
+}
+
+//查看公告
+message cm_check_notice{
+
+}
+
+message sm_check_notice{
+    string     notice = 1;		//公告
+}
+
+//同步服务器时间
+message cm_sync_server_time{
+
+}
+
+message sm_sync_server_time{
+    int64 serverTime    = 1;		//服务器时间（时间戳）
+}
+
+message sm_notify_text{
+    string msg    = 1;		//提示信息
+}
+

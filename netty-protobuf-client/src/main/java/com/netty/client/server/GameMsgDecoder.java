@@ -1,5 +1,7 @@
 package com.netty.client.server;
 
+import com.google.protobuf.GeneratedMessageV3;
+import com.netty.client.protobuf.MessageBuf;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -45,25 +47,19 @@ public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
         byteBuf.readBytes(msgBody);
         log.info("channelRead---msgBody>{}",msgBody);
         log.info("channelRead---frame>{}",frame);
-        ctx.fireChannelRead(frame);
-//        GeneratedMessageV3 cmd = null;
-//        cmd = MessageBuf.msg_req.parseFrom(msgBody);
-//        switch (msgCode) {
-//            case GameMsgProtocol.MsgCode.USER_ENTRY_CMD_VALUE:
-//                cmd = GameMsgProtocol.UserEntryCmd.parseFrom(msgBody);
-//                break;
-//
-//            case GameMsgProtocol.MsgCode.WHO_ELSE_IS_HERE_CMD_VALUE:
-//                cmd = GameMsgProtocol.WhoElseIsHereCmd.parseFrom(msgBody);
-//                break;
-//
-//            case GameMsgProtocol.MsgCode.USER_MOVE_TO_CMD_VALUE:
-//                cmd = GameMsgProtocol.UserMoveToCmd.parseFrom(msgBody);
-//                break;
-//        }
+        GeneratedMessageV3 cmd = null;
 
-//        if (null != cmd) {
-//            ctx.fireChannelRead(cmd);
-//        }
+        switch (msgCode) {
+            case MessageBuf.GAME.G_CMCheckVersion_VALUE:
+                cmd = MessageBuf.cm_check_version.parseFrom(msgBody);
+                break;
+            default:
+                cmd = MessageBuf.msg_req.parseFrom(msgBody);
+                break;
+        }
+
+        if (null != cmd) {
+            ctx.fireChannelRead(cmd);
+        }
     }
 }

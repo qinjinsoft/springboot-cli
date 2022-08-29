@@ -9,9 +9,12 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
+import io.netty.handler.logging.LogLevel;
+import io.netty.handler.logging.LoggingHandler;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -25,7 +28,7 @@ import javax.annotation.PreDestroy;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class TcpClient implements ITcpClient {
+public class GameClient {
 
     private final ClientProperties clientProperties;
 
@@ -43,34 +46,21 @@ public class TcpClient implements ITcpClient {
      */
     public static Integer connectedPort;
 
-    @Override
-    public void start() throws Exception {
+    public void start(){
         log.info("初始化 MQTT Client ...");
-        this.tcpClient();
+        this.gameClient();
     }
 
-    @Override
-    public void reconnect() throws Exception {
-        if (socketChannel != null && socketChannel.isActive()) {
-            socketChannel.close();
-            this.connect(connectedIp, connectedPort);
-        }
-
-    }
-
-    public void disconnect() {
-        if (socketChannel != null && socketChannel.isActive()) {
-            socketChannel.close();
-        }
-    }
 
     /**
      * mqttBroker初始化
      */
-    private void tcpClient() {
+    private void gameClient() {
         try {
             bootstrap = new Bootstrap()
-                    .remoteAddress("127.0.0.1", clientProperties.getClientPort())
+                    .group(WORKER_GROUP)
+                    .channel(NioSocketChannel.class)
+                    .handler(new LoggingHandler(LogLevel.INFO))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
@@ -82,10 +72,7 @@ public class TcpClient implements ITcpClient {
                                     new GameMsgHandler() // 自定义的消息处理器
                             );
                         }
-                    })
-                    .channel(NioSocketChannel.class)
-                    .option(ChannelOption.TCP_NODELAY, true);
-            bootstrap.group(WORKER_GROUP);
+                    });
             this.connect(clientProperties.getServerIp(), clientProperties.getServerPort());
         } catch (Exception e) {
             e.printStackTrace();
@@ -97,7 +84,6 @@ public class TcpClient implements ITcpClient {
      * 连接服务器
      */
     public void connect(String ip, Integer port) throws InterruptedException {
-        this.disconnect();
         connectedIp = ip;
         connectedPort = port;
         ChannelFuture future = bootstrap.connect(connectedIp, connectedPort).sync();
@@ -107,16 +93,6 @@ public class TcpClient implements ITcpClient {
         }
     }
 
-
-    /**
-     * 销毁
-     */
-    @PreDestroy
-    @Override
-    public void destroy() {
-        WORKER_GROUP.shutdownGracefully();
-        socketChannel.closeFuture();
-    }
 
     /**
      * 获取频道
